@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace WebScrape2025
 {
-    public partial class HomeScreen : Form
+    public partial class ScraperScreen : Form
     {
-        public HomeScreen()
+        public ScraperScreen()
         {
             InitializeComponent();
         }
-
-       
     }
 }
