@@ -28,32 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.HomeButton = new System.Windows.Forms.Button();
             this.OrganizationButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
             this.WordButton = new System.Windows.Forms.Button();
             this.DocButton = new System.Windows.Forms.Button();
             this.DownloadButton = new System.Windows.Forms.Button();
+            this.HomeButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // HomeButton
-            // 
-            this.HomeButton.BackColor = System.Drawing.Color.Gold;
-            this.HomeButton.Location = new System.Drawing.Point(310, 0);
-            this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(42, 56);
-            this.HomeButton.TabIndex = 0;
-            this.HomeButton.Text = "button1";
-            this.HomeButton.UseVisualStyleBackColor = false;
             // 
             // OrganizationButton
             // 
             this.OrganizationButton.BackColor = System.Drawing.Color.Gold;
+            this.OrganizationButton.Image = global::WebScrape2025.Properties.Resources.listIcon;
             this.OrganizationButton.Location = new System.Drawing.Point(310, 177);
             this.OrganizationButton.Name = "OrganizationButton";
             this.OrganizationButton.Size = new System.Drawing.Size(42, 116);
             this.OrganizationButton.TabIndex = 3;
-            this.OrganizationButton.Text = "button4";
             this.OrganizationButton.UseVisualStyleBackColor = false;
             // 
             // SaveButton
@@ -96,18 +86,27 @@
             this.DownloadButton.Text = "button6";
             this.DownloadButton.UseVisualStyleBackColor = false;
             // 
+            // HomeButton
+            // 
+            this.HomeButton.BackColor = System.Drawing.Color.Gold;
+            this.HomeButton.Location = new System.Drawing.Point(310, -3);
+            this.HomeButton.Name = "HomeButton";
+            this.HomeButton.Size = new System.Drawing.Size(42, 60);
+            this.HomeButton.TabIndex = 9;
+            this.HomeButton.UseVisualStyleBackColor = false;
+            // 
             // ScraperScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(353, 450);
+            this.Controls.Add(this.HomeButton);
             this.Controls.Add(this.DownloadButton);
             this.Controls.Add(this.DocButton);
             this.Controls.Add(this.WordButton);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.OrganizationButton);
-            this.Controls.Add(this.HomeButton);
             this.Name = "ScraperScreen";
             this.Text = "ScraperScreen";
             this.ResumeLayout(false);
@@ -115,12 +114,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button HomeButton;
         private System.Windows.Forms.Button OrganizationButton;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button WordButton;
         private System.Windows.Forms.Button DocButton;
         private System.Windows.Forms.Button DownloadButton;
+        private System.Windows.Forms.Button HomeButton;
     }
 }
