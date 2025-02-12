@@ -39,7 +39,7 @@
             // OrganizationButton
             // 
             this.OrganizationButton.BackColor = System.Drawing.Color.Gold;
-            this.OrganizationButton.Image = global::WebScrape2025.Properties.Resources.listIcon;
+//            this.OrganizationButton.Image = global::WebScrape2025.Properties.Resources.listIcon;
             this.OrganizationButton.Location = new System.Drawing.Point(310, 177);
             this.OrganizationButton.Name = "OrganizationButton";
             this.OrganizationButton.Size = new System.Drawing.Size(42, 116);
