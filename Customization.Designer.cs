@@ -61,7 +61,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkOrange;
+            this.button1.BackColor = System.Drawing.Color.Orange;
             this.button1.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.button1.Location = new System.Drawing.Point(131, 408);
