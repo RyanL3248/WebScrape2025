@@ -15,8 +15,17 @@ namespace WebScrape2025
         public ScraperScreen()
         {
             InitializeComponent();
+
+            this.Load += ScraperScreen_Load;
         }
 
-        
+        private void ScraperScreen_Load(object sender, EventArgs e)
+        {
+            this.StartPosition = FormStartPosition.Manual;
+
+            this.Location = new Point(750, 250);
+        }
+
+
     }
 }
