@@ -12,11 +12,25 @@ namespace WebScrape2025
 {
     public partial class Customization : Form
     {
+
+        private HomeScreen homeScreenForm;
         public Customization()
         {
             InitializeComponent();
         }
 
-       
+        public Customization(HomeScreen homeScreen)
+        {
+            InitializeComponent();
+            homeScreenForm = homeScreen;
+        }
+
+        private void homeBttn_Click(object sender, EventArgs e)
+        {
+            homeScreenForm.Location = this.Location;
+            homeScreenForm.Show();
+
+            this.Close();
+        }
     }
 }
