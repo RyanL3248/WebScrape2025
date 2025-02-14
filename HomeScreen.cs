@@ -12,11 +12,21 @@ namespace WebScrape2025
 {
     public partial class HomeScreen : Form
     {
+
+        //public Customization customizationForm;
         public HomeScreen()
         {
             InitializeComponent();
+
+            this.Load += HomeScreen_Load;
         }
 
+        private void HomeScreen_Load(object sender, EventArgs e)
+        {
+            this.StartPosition = FormStartPosition.Manual;
+
+            this.Location = new Point(750, 250);
+        }
 
         private void scraperButton_Click(object sender, EventArgs e)
         {
@@ -32,16 +42,13 @@ namespace WebScrape2025
         private void customizationBttn_Click(object sender, EventArgs e)
         {
             Customization customizationForm = new Customization(this);
-            //customizationForm.Location = this.Location;
+   
+            customizationForm.Location = this.Location;
 
             customizationForm.Show();
 
             this.Hide();
         }
 
-        private void HomeScreen_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

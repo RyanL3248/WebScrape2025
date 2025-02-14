@@ -28,72 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.OrganizationButton = new System.Windows.Forms.Button();
-            this.SaveButton = new System.Windows.Forms.Button();
-            this.WordButton = new System.Windows.Forms.Button();
-            this.DocButton = new System.Windows.Forms.Button();
-            this.DownloadButton = new System.Windows.Forms.Button();
-            this.HomeButton = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // OrganizationButton
+            // tabControl1
             // 
-            this.OrganizationButton.BackColor = System.Drawing.Color.Gold;
-//            this.OrganizationButton.Image = global::WebScrape2025.Properties.Resources.listIcon;
-            this.OrganizationButton.Location = new System.Drawing.Point(310, 177);
-            this.OrganizationButton.Name = "OrganizationButton";
-            this.OrganizationButton.Size = new System.Drawing.Size(42, 116);
-            this.OrganizationButton.TabIndex = 3;
-            this.OrganizationButton.UseVisualStyleBackColor = false;
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Location = new System.Drawing.Point(2, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(353, 24);
+            this.tabControl1.TabIndex = 0;
             // 
-            // SaveButton
+            // tabPage1
             // 
-            this.SaveButton.BackColor = System.Drawing.Color.Gold;
-            this.SaveButton.Location = new System.Drawing.Point(310, 294);
-            this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(42, 74);
-            this.SaveButton.TabIndex = 4;
-            this.SaveButton.Text = "button5";
-            this.SaveButton.UseVisualStyleBackColor = false;
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(345, 0);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // WordButton
+            // tabPage2
             // 
-            this.WordButton.BackColor = System.Drawing.Color.Gold;
-            this.WordButton.Location = new System.Drawing.Point(310, 54);
-            this.WordButton.Name = "WordButton";
-            this.WordButton.Size = new System.Drawing.Size(42, 60);
-            this.WordButton.TabIndex = 6;
-            this.WordButton.Text = "button2";
-            this.WordButton.UseVisualStyleBackColor = false;
-            // 
-            // DocButton
-            // 
-            this.DocButton.BackColor = System.Drawing.Color.Gold;
-            this.DocButton.Location = new System.Drawing.Point(310, 113);
-            this.DocButton.Name = "DocButton";
-            this.DocButton.Size = new System.Drawing.Size(42, 65);
-            this.DocButton.TabIndex = 7;
-            this.DocButton.Text = "button3";
-            this.DocButton.UseVisualStyleBackColor = false;
-            // 
-            // DownloadButton
-            // 
-            this.DownloadButton.BackColor = System.Drawing.Color.Gold;
-            this.DownloadButton.Location = new System.Drawing.Point(310, 367);
-            this.DownloadButton.Name = "DownloadButton";
-            this.DownloadButton.Size = new System.Drawing.Size(42, 84);
-            this.DownloadButton.TabIndex = 8;
-            this.DownloadButton.Text = "button6";
-            this.DownloadButton.UseVisualStyleBackColor = false;
-            // 
-            // HomeButton
-            // 
-            this.HomeButton.BackColor = System.Drawing.Color.Gold;
-            this.HomeButton.Location = new System.Drawing.Point(310, -3);
-            this.HomeButton.Name = "HomeButton";
-            this.HomeButton.Size = new System.Drawing.Size(42, 60);
-            this.HomeButton.TabIndex = 9;
-            this.HomeButton.UseVisualStyleBackColor = false;
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(345, 0);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // ScraperScreen
             // 
@@ -101,24 +70,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(353, 450);
-            this.Controls.Add(this.HomeButton);
-            this.Controls.Add(this.DownloadButton);
-            this.Controls.Add(this.DocButton);
-            this.Controls.Add(this.WordButton);
-            this.Controls.Add(this.SaveButton);
-            this.Controls.Add(this.OrganizationButton);
+            this.Controls.Add(this.tabControl1);
             this.Name = "ScraperScreen";
             this.Text = "ScraperScreen";
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button OrganizationButton;
-        private System.Windows.Forms.Button SaveButton;
-        private System.Windows.Forms.Button WordButton;
-        private System.Windows.Forms.Button DocButton;
-        private System.Windows.Forms.Button DownloadButton;
-        private System.Windows.Forms.Button HomeButton;
+
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }

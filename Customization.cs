@@ -23,6 +23,15 @@ namespace WebScrape2025
         {
             InitializeComponent();
             homeScreenForm = homeScreen;
+
+            this.Load += Customization_Load;
+        }
+
+        private void Customization_Load(object sender, EventArgs e)
+        {
+            this.StartPosition = FormStartPosition.Manual;
+
+            this.Location = new Point(750, 250);
         }
 
         private void homeBttn_Click(object sender, EventArgs e)
