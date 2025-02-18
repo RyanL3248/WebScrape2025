@@ -17,6 +17,7 @@ namespace WebScrape2025
         public Customization()
         {
             InitializeComponent();
+            this.MinimumSize = new Size(369, 489);
         }
 
         public Customization(HomeScreen homeScreen)
@@ -25,15 +26,12 @@ namespace WebScrape2025
             homeScreenForm = homeScreen;
 
             this.Load += Customization_Load;
+            this.MinimumSize = new Size(369, 489);
         }
 
         private void Customization_Load(object sender, EventArgs e)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
-
-            this.Size = new Size(489, 601);
-
-            //this.Location = new Point(750, 250);
         }
 
         private void homeBttn_Click(object sender, EventArgs e)

@@ -38,6 +38,9 @@
             this.saveBttn = new System.Windows.Forms.Button();
             this.downloadBttn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.screenBttn = new System.Windows.Forms.Button();
+            this.websiteLabel = new System.Windows.Forms.Label();
+            this.websiteTxtbox = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -46,11 +49,11 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(3, 0);
+            this.tabControl1.Location = new System.Drawing.Point(3, 2);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(468, 30);
+            this.tabControl1.Size = new System.Drawing.Size(468, 28);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -59,7 +62,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage1.Size = new System.Drawing.Size(460, 1);
+            this.tabPage1.Size = new System.Drawing.Size(460, 0);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -70,7 +73,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPage2.Size = new System.Drawing.Size(463, 1);
+            this.tabPage2.Size = new System.Drawing.Size(460, 0);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -85,6 +88,7 @@
             this.homeBttn.TabIndex = 0;
             this.homeBttn.Text = "button1";
             this.homeBttn.UseVisualStyleBackColor = true;
+            this.homeBttn.Click += new System.EventHandler(this.homeBttn_Click);
             // 
             // wordBttn
             // 
@@ -154,15 +158,45 @@
             this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel1.Location = new System.Drawing.Point(411, 25);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(60, 535);
+            this.panel1.Size = new System.Drawing.Size(60, 530);
             this.panel1.TabIndex = 7;
+            // 
+            // screenBttn
+            // 
+            this.screenBttn.BackColor = System.Drawing.Color.Orange;
+            this.screenBttn.Enabled = false;
+            this.screenBttn.Location = new System.Drawing.Point(20, 51);
+            this.screenBttn.Name = "screenBttn";
+            this.screenBttn.Size = new System.Drawing.Size(369, 489);
+            this.screenBttn.TabIndex = 8;
+            this.screenBttn.UseVisualStyleBackColor = false;
+            // 
+            // websiteLabel
+            // 
+            this.websiteLabel.AutoSize = true;
+            this.websiteLabel.BackColor = System.Drawing.Color.Orange;
+            this.websiteLabel.Location = new System.Drawing.Point(41, 73);
+            this.websiteLabel.Name = "websiteLabel";
+            this.websiteLabel.Size = new System.Drawing.Size(90, 16);
+            this.websiteLabel.TabIndex = 9;
+            this.websiteLabel.Text = "Website URL:";
+            // 
+            // websiteTxtbox
+            // 
+            this.websiteTxtbox.Location = new System.Drawing.Point(44, 92);
+            this.websiteTxtbox.Name = "websiteTxtbox";
+            this.websiteTxtbox.Size = new System.Drawing.Size(327, 22);
+            this.websiteTxtbox.TabIndex = 10;
             // 
             // ScraperScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(471, 554);
+            this.ClientSize = new System.Drawing.Size(472, 554);
+            this.Controls.Add(this.websiteTxtbox);
+            this.Controls.Add(this.websiteLabel);
+            this.Controls.Add(this.screenBttn);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -171,6 +205,7 @@
             this.tabControl1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -186,5 +221,8 @@
         private System.Windows.Forms.Button saveBttn;
         private System.Windows.Forms.Button downloadBttn;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button screenBttn;
+        private System.Windows.Forms.Label websiteLabel;
+        private System.Windows.Forms.TextBox websiteTxtbox;
     }
 }
