@@ -66,7 +66,7 @@
             this.homeBttn.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.homeBttn.ForeColor = System.Drawing.Color.RoyalBlue;
             this.homeBttn.Location = new System.Drawing.Point(175, 502);
-            this.homeBttn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.homeBttn.Margin = new System.Windows.Forms.Padding(4);
             this.homeBttn.Name = "homeBttn";
             this.homeBttn.Size = new System.Drawing.Size(151, 37);
             this.homeBttn.TabIndex = 2;
@@ -80,7 +80,7 @@
             this.button2.Enabled = false;
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button2.Location = new System.Drawing.Point(51, 74);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(363, 421);
             this.button2.TabIndex = 3;
@@ -103,7 +103,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.Color.Gold;
             this.checkBox1.Location = new System.Drawing.Point(69, 107);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(55, 20);
             this.checkBox1.TabIndex = 5;
@@ -124,7 +124,7 @@
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(69, 164);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(329, 22);
             this.textBox1.TabIndex = 7;
@@ -134,7 +134,7 @@
             this.checkBox2.AutoSize = true;
             this.checkBox2.BackColor = System.Drawing.Color.Gold;
             this.checkBox2.Location = new System.Drawing.Point(69, 209);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox2.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(74, 20);
             this.checkBox2.TabIndex = 8;
@@ -146,7 +146,7 @@
             this.checkBox3.AutoSize = true;
             this.checkBox3.BackColor = System.Drawing.Color.Gold;
             this.checkBox3.Location = new System.Drawing.Point(235, 209);
-            this.checkBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox3.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(60, 20);
             this.checkBox3.TabIndex = 9;
@@ -158,7 +158,7 @@
             this.checkBox4.AutoSize = true;
             this.checkBox4.BackColor = System.Drawing.Color.Gold;
             this.checkBox4.Location = new System.Drawing.Point(69, 250);
-            this.checkBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox4.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(72, 20);
             this.checkBox4.TabIndex = 10;
@@ -170,7 +170,7 @@
             this.checkBox5.AutoSize = true;
             this.checkBox5.BackColor = System.Drawing.Color.Gold;
             this.checkBox5.Location = new System.Drawing.Point(235, 250);
-            this.checkBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox5.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(82, 20);
             this.checkBox5.TabIndex = 11;
@@ -193,7 +193,7 @@
             this.checkBox6.AutoSize = true;
             this.checkBox6.BackColor = System.Drawing.Color.Gold;
             this.checkBox6.Location = new System.Drawing.Point(69, 353);
-            this.checkBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox6.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(94, 20);
             this.checkBox6.TabIndex = 13;
@@ -205,7 +205,7 @@
             this.checkBox7.AutoSize = true;
             this.checkBox7.BackColor = System.Drawing.Color.Gold;
             this.checkBox7.Location = new System.Drawing.Point(197, 353);
-            this.checkBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox7.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(58, 20);
             this.checkBox7.TabIndex = 14;
@@ -217,7 +217,7 @@
             this.checkBox8.AutoSize = true;
             this.checkBox8.BackColor = System.Drawing.Color.Gold;
             this.checkBox8.Location = new System.Drawing.Point(285, 353);
-            this.checkBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox8.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox8.Name = "checkBox8";
             this.checkBox8.Size = new System.Drawing.Size(72, 20);
             this.checkBox8.TabIndex = 15;
@@ -229,7 +229,7 @@
             this.checkBox9.AutoSize = true;
             this.checkBox9.BackColor = System.Drawing.Color.Gold;
             this.checkBox9.Location = new System.Drawing.Point(69, 394);
-            this.checkBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox9.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox9.Name = "checkBox9";
             this.checkBox9.Size = new System.Drawing.Size(191, 20);
             this.checkBox9.TabIndex = 16;
@@ -241,7 +241,7 @@
             this.checkBox10.AutoSize = true;
             this.checkBox10.BackColor = System.Drawing.Color.Gold;
             this.checkBox10.Location = new System.Drawing.Point(69, 433);
-            this.checkBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox10.Margin = new System.Windows.Forms.Padding(4);
             this.checkBox10.Name = "checkBox10";
             this.checkBox10.Size = new System.Drawing.Size(81, 20);
             this.checkBox10.TabIndex = 17;
@@ -251,12 +251,15 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.button3.FlatAppearance.BorderSize = 2;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Gill Sans MT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Gold;
-            this.button3.Location = new System.Drawing.Point(249, 446);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Location = new System.Drawing.Point(249, 447);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(151, 37);
+            this.button3.Size = new System.Drawing.Size(151, 36);
             this.button3.TabIndex = 18;
             this.button3.Text = "SAVE";
             this.button3.UseVisualStyleBackColor = false;
@@ -285,7 +288,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.homeBttn);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Customization";
             this.Text = "CustomizationScreen";
             this.ResumeLayout(false);

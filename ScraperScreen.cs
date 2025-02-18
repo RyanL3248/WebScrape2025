@@ -21,11 +21,12 @@ namespace WebScrape2025
 
         private void ScraperScreen_Load(object sender, EventArgs e)
         {
-            this.StartPosition = FormStartPosition.Manual;
+            this.StartPosition = FormStartPosition.CenterScreen;
 
-            this.Location = new Point(750, 250);
+            this.Size = new Size(489, 601);
+
+            //this.Location = new Point(750, 250);
         }
-
 
     }
 }

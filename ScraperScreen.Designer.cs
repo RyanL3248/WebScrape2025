@@ -31,12 +31,15 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.homeBttn = new System.Windows.Forms.Button();
+            this.wordBttn = new System.Windows.Forms.Button();
+            this.docBttn = new System.Windows.Forms.Button();
+            this.orgBttn = new System.Windows.Forms.Button();
+            this.saveBttn = new System.Windows.Forms.Button();
+            this.downloadBttn = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tabControl1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -44,19 +47,19 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(3, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(471, 30);
+            this.tabControl1.Size = new System.Drawing.Size(468, 30);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPage1.Size = new System.Drawing.Size(463, 1);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(4);
+            this.tabPage1.Size = new System.Drawing.Size(460, 1);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -64,58 +67,95 @@
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(4);
             this.tabPage2.Size = new System.Drawing.Size(463, 1);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // homeBttn
             // 
-            this.button1.Location = new System.Drawing.Point(417, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(52, 69);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.homeBttn.FlatAppearance.BorderSize = 2;
+            this.homeBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.homeBttn.Location = new System.Drawing.Point(0, 4);
+            this.homeBttn.Name = "homeBttn";
+            this.homeBttn.Size = new System.Drawing.Size(59, 82);
+            this.homeBttn.TabIndex = 0;
+            this.homeBttn.Text = "button1";
+            this.homeBttn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // wordBttn
             // 
-            this.button2.Location = new System.Drawing.Point(417, 105);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(52, 69);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.wordBttn.FlatAppearance.BorderSize = 2;
+            this.wordBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.wordBttn.Location = new System.Drawing.Point(0, 84);
+            this.wordBttn.Name = "wordBttn";
+            this.wordBttn.Size = new System.Drawing.Size(59, 82);
+            this.wordBttn.TabIndex = 8;
+            this.wordBttn.Text = "button2";
+            this.wordBttn.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // docBttn
             // 
-            this.button3.Location = new System.Drawing.Point(417, 177);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(52, 69);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.docBttn.FlatAppearance.BorderSize = 2;
+            this.docBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.docBttn.Location = new System.Drawing.Point(0, 164);
+            this.docBttn.Name = "docBttn";
+            this.docBttn.Size = new System.Drawing.Size(59, 82);
+            this.docBttn.TabIndex = 9;
+            this.docBttn.Text = "button3";
+            this.docBttn.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // orgBttn
             // 
-            this.button4.Location = new System.Drawing.Point(417, 249);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(52, 147);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.orgBttn.FlatAppearance.BorderSize = 2;
+            this.orgBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.orgBttn.Location = new System.Drawing.Point(0, 244);
+            this.orgBttn.Name = "orgBttn";
+            this.orgBttn.Size = new System.Drawing.Size(59, 129);
+            this.orgBttn.TabIndex = 10;
+            this.orgBttn.Text = "button4";
+            this.orgBttn.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // saveBttn
             // 
-            this.button5.Location = new System.Drawing.Point(417, 399);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(52, 85);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.saveBttn.FlatAppearance.BorderSize = 2;
+            this.saveBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveBttn.Location = new System.Drawing.Point(0, 371);
+            this.saveBttn.Name = "saveBttn";
+            this.saveBttn.Size = new System.Drawing.Size(59, 82);
+            this.saveBttn.TabIndex = 10;
+            this.saveBttn.Text = "button5";
+            this.saveBttn.UseVisualStyleBackColor = true;
+            // 
+            // downloadBttn
+            // 
+            this.downloadBttn.FlatAppearance.BorderSize = 2;
+            this.downloadBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.downloadBttn.Location = new System.Drawing.Point(0, 450);
+            this.downloadBttn.Name = "downloadBttn";
+            this.downloadBttn.Size = new System.Drawing.Size(59, 78);
+            this.downloadBttn.TabIndex = 11;
+            this.downloadBttn.Text = "button6";
+            this.downloadBttn.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gold;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.downloadBttn);
+            this.panel1.Controls.Add(this.saveBttn);
+            this.panel1.Controls.Add(this.orgBttn);
+            this.panel1.Controls.Add(this.docBttn);
+            this.panel1.Controls.Add(this.wordBttn);
+            this.panel1.Controls.Add(this.homeBttn);
+            this.panel1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Location = new System.Drawing.Point(411, 25);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(60, 535);
+            this.panel1.TabIndex = 7;
             // 
             // ScraperScreen
             // 
@@ -123,16 +163,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(471, 554);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ScraperScreen";
             this.Text = "ScraperScreen";
             this.tabControl1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -142,10 +179,12 @@
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button homeBttn;
+        private System.Windows.Forms.Button wordBttn;
+        private System.Windows.Forms.Button docBttn;
+        private System.Windows.Forms.Button orgBttn;
+        private System.Windows.Forms.Button saveBttn;
+        private System.Windows.Forms.Button downloadBttn;
+        private System.Windows.Forms.Panel panel1;
     }
 }

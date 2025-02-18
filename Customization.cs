@@ -29,9 +29,11 @@ namespace WebScrape2025
 
         private void Customization_Load(object sender, EventArgs e)
         {
-            this.StartPosition = FormStartPosition.Manual;
+            this.StartPosition = FormStartPosition.CenterScreen;
 
-            this.Location = new Point(750, 250);
+            this.Size = new Size(489, 601);
+
+            //this.Location = new Point(750, 250);
         }
 
         private void homeBttn_Click(object sender, EventArgs e)
