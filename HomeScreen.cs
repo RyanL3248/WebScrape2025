@@ -13,7 +13,7 @@ namespace WebScrape2025
 {
     public partial class HomeScreen : Form
     {
-        
+        //private Customization customizationForm;
         public HomeScreen()
         {
             InitializeComponent();
@@ -48,7 +48,7 @@ namespace WebScrape2025
         {
             Customization customizationForm = new Customization(this);
    
-            //customizationForm.Location = this.Location;
+            customizationForm.Location = this.Location;
 
             customizationForm.Show();
 
