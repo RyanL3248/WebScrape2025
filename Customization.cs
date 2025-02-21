@@ -16,9 +16,9 @@ namespace WebScrape2025
 
         private HomeScreen homeScreenForm;
         public bool scpTxt;
-        public bool txtChecked;
-        public bool saveTxt;
+        private bool origTxtCboxState;
         public bool scpImages;
+        private bool origImgCboxState;
         public bool scpLinks;
         public bool scpQuotes;
         public bool scpStats;
@@ -40,38 +40,49 @@ namespace WebScrape2025
             homeScreenForm = homeScreen;
 
            this.Load += Customization_Load;
+           this.FormClosing += Customization_FormClosing;
            this.MinimumSize = new Size(369, 489);
         }
 
         private void Customization_Load(object sender, EventArgs e)
         {
-            //TODO
+            this.txtCbox.Checked = Properties.Settings.Default.txtCboxState;
+            origTxtCboxState = this.txtCbox.Checked;
+
+            this.imageCbox.Checked = Properties.Settings.Default.txtCboxState;
+            origImgCboxState = this.imageCbox.Checked;
           
+        }
+        private void Customization_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Properties.Settings.Default.txtCboxState = origTxtCboxState;
+            Properties.Settings.Default.imageCboxState = origImgCboxState;
         }
 
         private void homeBttn_Click(object sender, EventArgs e)
         {
+            this.txtCbox.Checked = origTxtCboxState;
+            Properties.Settings.Default.txtCboxState = origTxtCboxState;
+
+            this.imageCbox.Checked = origImgCboxState;
+            Properties.Settings.Default.imageCboxState = origImgCboxState;
+
             homeScreenForm.Location = this.Location;
             homeScreenForm.Show();
 
             this.Hide();
-
-            if (saveTxt == false)
-            {
-                this.txtCbox.Checked = false;
-                Properties.Settings.Default.txtCboxState = false;
-            }
         }
 
         private void txtCbox_CheckedChanged(object sender, EventArgs e)
         {
-            scpTxt = true;
-            txtChecked = true;
+            Properties.Settings.Default.txtCboxState = this.txtCbox.Checked;
+            scpTxt = this.txtCbox.Checked;
         }
 
         private void imageCbox_CheckedChanged(object sender, EventArgs e)
         {
-            scpImages = true;
+            Properties.Settings.Default.imageCboxState = this.imageCbox.Checked;
+            scpImages = this.imageCbox.Checked;
         }
 
         private void linksCbox_CheckedChanged(object sender, EventArgs e)
@@ -116,11 +127,10 @@ namespace WebScrape2025
 
         private void saveBttn_Click(object sender, EventArgs e)
         {
-            if (txtChecked == true)
-            {
-                saveTxt = true;
-                Properties.Settings.Default.Save();
-            }
+            Properties.Settings.Default.Save();
+            origTxtCboxState = this.txtCbox.Checked;
+            origImgCboxState = this.imageCbox.Checked;
+
             //txtChecked = true;
             //Properties.Settings.Default.Save();
 
