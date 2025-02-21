@@ -20,10 +20,15 @@ namespace WebScrape2025
         public bool scpImages;
         private bool origImgCboxState;
         public bool scpLinks;
+        private bool origLinkCboxState;
         public bool scpQuotes;
+        private bool origQuoteCboxState;
         public bool scpStats;
+        private bool origStatCboxState;
         public bool putTitle;
+        private bool origTitleCboxState;
         public bool putDate;
+        private bool origDateCboxState;
         public bool putSource;
         public bool parOrg;
         public bool listOrg;
@@ -49,14 +54,34 @@ namespace WebScrape2025
             this.txtCbox.Checked = Properties.Settings.Default.txtCboxState;
             origTxtCboxState = this.txtCbox.Checked;
 
-            this.imageCbox.Checked = Properties.Settings.Default.txtCboxState;
+            this.imageCbox.Checked = Properties.Settings.Default.imageCboxState;
             origImgCboxState = this.imageCbox.Checked;
+
+            this.linksCbox.Checked = Properties.Settings.Default.linksCboxState;
+            origLinkCboxState = this.linksCbox.Checked;
+
+            this.quotesCbox.Checked = Properties.Settings.Default.quoteCboxState;
+            origQuoteCboxState = this.quotesCbox.Checked;
+
+            this.statsCbox.Checked = Properties.Settings.Default.statsCboxState;
+            origStatCboxState = this.statsCbox.Checked;
+
+            this.titleCbox.Checked = Properties.Settings.Default.titleCboxState;
+            origTitleCboxState = this.titleCbox.Checked;
+
+            this.dateCbox.Checked = Properties.Settings.Default.dateCboxState;
+            origDateCboxState = this.dateCbox.Checked;
           
         }
         private void Customization_FormClosing(object sender, FormClosingEventArgs e)
         {
             Properties.Settings.Default.txtCboxState = origTxtCboxState;
             Properties.Settings.Default.imageCboxState = origImgCboxState;
+            Properties.Settings.Default.linksCboxState = origLinkCboxState;
+            Properties.Settings.Default.quoteCboxState = origQuoteCboxState;
+            Properties.Settings.Default.statsCboxState = origStatCboxState;
+            Properties.Settings.Default.titleCboxState = origTitleCboxState;
+            Properties.Settings.Default.dateCboxState = origDateCboxState;
         }
 
         private void homeBttn_Click(object sender, EventArgs e)
@@ -66,6 +91,21 @@ namespace WebScrape2025
 
             this.imageCbox.Checked = origImgCboxState;
             Properties.Settings.Default.imageCboxState = origImgCboxState;
+
+            this.linksCbox.Checked = origLinkCboxState;
+            Properties.Settings.Default.linksCboxState = origLinkCboxState;
+
+            this.quotesCbox.Checked = origQuoteCboxState;
+            Properties.Settings.Default.quoteCboxState = origQuoteCboxState;
+
+            this.statsCbox.Checked = origStatCboxState;
+            Properties.Settings.Default.statsCboxState = origStatCboxState;
+
+            this.titleCbox.Checked = origTitleCboxState;
+            Properties.Settings.Default.titleCboxState = origTitleCboxState;
+
+            this.dateCbox.Checked = origDateCboxState;
+            Properties.Settings.Default.dateCboxState = origDateCboxState;
 
             homeScreenForm.Location = this.Location;
             homeScreenForm.Show();
@@ -87,27 +127,32 @@ namespace WebScrape2025
 
         private void linksCbox_CheckedChanged(object sender, EventArgs e)
         {
-            scpLinks = true;
+            Properties.Settings.Default.linksCboxState = this.linksCbox.Checked;
+            scpLinks = this.linksCbox.Checked;
         }
 
         private void quotesCbox_CheckedChanged(object sender, EventArgs e)
         {
-            scpQuotes = true;
+            Properties.Settings.Default.quoteCboxState = this.quotesCbox.Checked;
+            scpQuotes = this.quotesCbox.Checked;
         }
 
         private void statsCbox_CheckedChanged(object sender, EventArgs e)
         {
-            scpStats = true;
+            Properties.Settings.Default.statsCboxState = this.statsCbox.Checked;
+            scpStats = this.statsCbox.Checked;
         }
 
         private void titleCbox_CheckedChanged(object sender, EventArgs e)
         {
-            putTitle = true;
+            Properties.Settings.Default.titleCboxState = this.titleCbox.Checked;
+            putTitle = this.titleCbox.Checked;
         }
 
         private void dateCbox_CheckedChanged(object sender, EventArgs e)
         {
-            putDate = true;
+            Properties.Settings.Default.dateCboxState = this.dateCbox.Checked;
+            putDate = this.dateCbox.Checked;
         }
 
         private void sourceCbox_CheckedChanged(object sender, EventArgs e)
@@ -128,18 +173,14 @@ namespace WebScrape2025
         private void saveBttn_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.Save();
+
             origTxtCboxState = this.txtCbox.Checked;
             origImgCboxState = this.imageCbox.Checked;
-
-            //txtChecked = true;
-            //Properties.Settings.Default.Save();
-
-            //Properties.Settings.Default.imageCboxState = this.imageCbox.Checked;
-            //Properties.Settings.Default.Save();
-
-            //Properties.Settings.Default.linksCboxState = this.linksCbox.Checked;
-            //Properties.Settings.Default.Save();
-
+            origLinkCboxState = this.linksCbox.Checked;
+            origQuoteCboxState = this.quotesCbox.Checked;
+            origStatCboxState = this.statsCbox.Checked;
+            origTitleCboxState = this.titleCbox.Checked;
+            origDateCboxState = this.dateCbox.Checked;
 
         }
     }

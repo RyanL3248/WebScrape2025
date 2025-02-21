@@ -34,16 +34,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.keywordTxtbox = new System.Windows.Forms.TextBox();
-            this.linksCbox = new System.Windows.Forms.CheckBox();
-            this.quotesCbox = new System.Windows.Forms.CheckBox();
-            this.statsCbox = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.titleCbox = new System.Windows.Forms.CheckBox();
             this.dateCbox = new System.Windows.Forms.CheckBox();
             this.sourceCbox = new System.Windows.Forms.CheckBox();
             this.paragraphCbox = new System.Windows.Forms.CheckBox();
             this.listCbox = new System.Windows.Forms.CheckBox();
             this.saveBttn = new System.Windows.Forms.Button();
+            this.titleCbox = new System.Windows.Forms.CheckBox();
+            this.statsCbox = new System.Windows.Forms.CheckBox();
+            this.quotesCbox = new System.Windows.Forms.CheckBox();
+            this.linksCbox = new System.Windows.Forms.CheckBox();
             this.imageCbox = new System.Windows.Forms.CheckBox();
             this.txtCbox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
@@ -117,47 +117,6 @@
             this.keywordTxtbox.Size = new System.Drawing.Size(329, 22);
             this.keywordTxtbox.TabIndex = 7;
             // 
-            // linksCbox
-            // 
-            this.linksCbox.AutoSize = true;
-            this.linksCbox.BackColor = System.Drawing.Color.Gold;
-            this.linksCbox.Checked = global::WebScrape2025.Properties.Settings.Default.linksCboxState;
-            this.linksCbox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::WebScrape2025.Properties.Settings.Default, "linksCboxState", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.linksCbox.Location = new System.Drawing.Point(235, 209);
-            this.linksCbox.Margin = new System.Windows.Forms.Padding(4);
-            this.linksCbox.Name = "linksCbox";
-            this.linksCbox.Size = new System.Drawing.Size(60, 20);
-            this.linksCbox.TabIndex = 9;
-            this.linksCbox.Text = "Links";
-            this.linksCbox.UseVisualStyleBackColor = false;
-            this.linksCbox.CheckedChanged += new System.EventHandler(this.linksCbox_CheckedChanged);
-            // 
-            // quotesCbox
-            // 
-            this.quotesCbox.AutoSize = true;
-            this.quotesCbox.BackColor = System.Drawing.Color.Gold;
-            this.quotesCbox.Location = new System.Drawing.Point(69, 250);
-            this.quotesCbox.Margin = new System.Windows.Forms.Padding(4);
-            this.quotesCbox.Name = "quotesCbox";
-            this.quotesCbox.Size = new System.Drawing.Size(72, 20);
-            this.quotesCbox.TabIndex = 10;
-            this.quotesCbox.Text = "Quotes";
-            this.quotesCbox.UseVisualStyleBackColor = false;
-            this.quotesCbox.CheckedChanged += new System.EventHandler(this.quotesCbox_CheckedChanged);
-            // 
-            // statsCbox
-            // 
-            this.statsCbox.AutoSize = true;
-            this.statsCbox.BackColor = System.Drawing.Color.Gold;
-            this.statsCbox.Location = new System.Drawing.Point(235, 250);
-            this.statsCbox.Margin = new System.Windows.Forms.Padding(4);
-            this.statsCbox.Name = "statsCbox";
-            this.statsCbox.Size = new System.Drawing.Size(82, 20);
-            this.statsCbox.TabIndex = 11;
-            this.statsCbox.Text = "Statistics";
-            this.statsCbox.UseVisualStyleBackColor = false;
-            this.statsCbox.CheckedChanged += new System.EventHandler(this.statsCbox_CheckedChanged);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -169,23 +128,12 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Organize:";
             // 
-            // titleCbox
-            // 
-            this.titleCbox.AutoSize = true;
-            this.titleCbox.BackColor = System.Drawing.Color.Gold;
-            this.titleCbox.Location = new System.Drawing.Point(69, 353);
-            this.titleCbox.Margin = new System.Windows.Forms.Padding(4);
-            this.titleCbox.Name = "titleCbox";
-            this.titleCbox.Size = new System.Drawing.Size(94, 20);
-            this.titleCbox.TabIndex = 13;
-            this.titleCbox.Text = "Topic/Title";
-            this.titleCbox.UseVisualStyleBackColor = false;
-            this.titleCbox.CheckedChanged += new System.EventHandler(this.titleCbox_CheckedChanged);
-            // 
             // dateCbox
             // 
             this.dateCbox.AutoSize = true;
             this.dateCbox.BackColor = System.Drawing.Color.Gold;
+            this.dateCbox.Checked = global::WebScrape2025.Properties.Settings.Default.dateCboxState;
+            this.dateCbox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::WebScrape2025.Properties.Settings.Default, "dateCboxState", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.dateCbox.Location = new System.Drawing.Point(197, 353);
             this.dateCbox.Margin = new System.Windows.Forms.Padding(4);
             this.dateCbox.Name = "dateCbox";
@@ -250,6 +198,66 @@
             this.saveBttn.Text = "SAVE";
             this.saveBttn.UseVisualStyleBackColor = false;
             this.saveBttn.Click += new System.EventHandler(this.saveBttn_Click);
+            // 
+            // titleCbox
+            // 
+            this.titleCbox.AutoSize = true;
+            this.titleCbox.BackColor = System.Drawing.Color.Gold;
+            this.titleCbox.Checked = global::WebScrape2025.Properties.Settings.Default.titleCboxState;
+            this.titleCbox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::WebScrape2025.Properties.Settings.Default, "titleCboxState", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.titleCbox.Location = new System.Drawing.Point(69, 353);
+            this.titleCbox.Margin = new System.Windows.Forms.Padding(4);
+            this.titleCbox.Name = "titleCbox";
+            this.titleCbox.Size = new System.Drawing.Size(94, 20);
+            this.titleCbox.TabIndex = 13;
+            this.titleCbox.Text = "Topic/Title";
+            this.titleCbox.UseVisualStyleBackColor = false;
+            this.titleCbox.CheckedChanged += new System.EventHandler(this.titleCbox_CheckedChanged);
+            // 
+            // statsCbox
+            // 
+            this.statsCbox.AutoSize = true;
+            this.statsCbox.BackColor = System.Drawing.Color.Gold;
+            this.statsCbox.Checked = global::WebScrape2025.Properties.Settings.Default.statsCboxState;
+            this.statsCbox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::WebScrape2025.Properties.Settings.Default, "statsCboxState", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.statsCbox.Location = new System.Drawing.Point(235, 250);
+            this.statsCbox.Margin = new System.Windows.Forms.Padding(4);
+            this.statsCbox.Name = "statsCbox";
+            this.statsCbox.Size = new System.Drawing.Size(82, 20);
+            this.statsCbox.TabIndex = 11;
+            this.statsCbox.Text = "Statistics";
+            this.statsCbox.UseVisualStyleBackColor = false;
+            this.statsCbox.CheckedChanged += new System.EventHandler(this.statsCbox_CheckedChanged);
+            // 
+            // quotesCbox
+            // 
+            this.quotesCbox.AutoSize = true;
+            this.quotesCbox.BackColor = System.Drawing.Color.Gold;
+            this.quotesCbox.Checked = global::WebScrape2025.Properties.Settings.Default.quoteCboxState;
+            this.quotesCbox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::WebScrape2025.Properties.Settings.Default, "quoteCboxState", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.quotesCbox.Location = new System.Drawing.Point(69, 250);
+            this.quotesCbox.Margin = new System.Windows.Forms.Padding(4);
+            this.quotesCbox.Name = "quotesCbox";
+            this.quotesCbox.Size = new System.Drawing.Size(72, 20);
+            this.quotesCbox.TabIndex = 10;
+            this.quotesCbox.Text = "Quotes";
+            this.quotesCbox.UseVisualStyleBackColor = false;
+            this.quotesCbox.CheckedChanged += new System.EventHandler(this.quotesCbox_CheckedChanged);
+            // 
+            // linksCbox
+            // 
+            this.linksCbox.AutoSize = true;
+            this.linksCbox.BackColor = System.Drawing.Color.Gold;
+            this.linksCbox.Checked = global::WebScrape2025.Properties.Settings.Default.linksCboxState;
+            this.linksCbox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::WebScrape2025.Properties.Settings.Default, "linksCboxState", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.linksCbox.Location = new System.Drawing.Point(235, 209);
+            this.linksCbox.Margin = new System.Windows.Forms.Padding(4);
+            this.linksCbox.Name = "linksCbox";
+            this.linksCbox.Size = new System.Drawing.Size(60, 20);
+            this.linksCbox.TabIndex = 9;
+            this.linksCbox.Text = "Links";
+            this.linksCbox.UseVisualStyleBackColor = false;
+            this.linksCbox.CheckedChanged += new System.EventHandler(this.linksCbox_CheckedChanged);
             // 
             // imageCbox
             // 

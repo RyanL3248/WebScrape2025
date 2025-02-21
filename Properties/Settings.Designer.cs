@@ -58,5 +58,53 @@ namespace WebScrape2025.Properties {
                 this["linksCboxState"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool quoteCboxState {
+            get {
+                return ((bool)(this["quoteCboxState"]));
+            }
+            set {
+                this["quoteCboxState"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool statsCboxState {
+            get {
+                return ((bool)(this["statsCboxState"]));
+            }
+            set {
+                this["statsCboxState"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool titleCboxState {
+            get {
+                return ((bool)(this["titleCboxState"]));
+            }
+            set {
+                this["titleCboxState"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool dateCboxState {
+            get {
+                return ((bool)(this["dateCboxState"]));
+            }
+            set {
+                this["dateCboxState"] = value;
+            }
+        }
     }
 }
