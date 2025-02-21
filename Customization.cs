@@ -17,6 +17,7 @@ namespace WebScrape2025
         private HomeScreen homeScreenForm;
         public bool scpTxt;
         public bool txtChecked;
+        public bool saveTxt;
         public bool scpImages;
         public bool scpLinks;
         public bool scpQuotes;
@@ -38,14 +39,14 @@ namespace WebScrape2025
             InitializeComponent();
             homeScreenForm = homeScreen;
 
-            this.Load += Customization_Load;
-            this.MinimumSize = new Size(369, 489);
+           this.Load += Customization_Load;
+           this.MinimumSize = new Size(369, 489);
         }
 
         private void Customization_Load(object sender, EventArgs e)
         {
-            //this.StartPosition = FormStartPosition.CenterScreen;
-            this.txtCbox.Checked = Properties.Settings.Default.txtCboxState;
+            //TODO
+          
         }
 
         private void homeBttn_Click(object sender, EventArgs e)
@@ -55,24 +56,22 @@ namespace WebScrape2025
 
             this.Hide();
 
-            if (txtChecked == false)
+            if (saveTxt == false)
             {
                 this.txtCbox.Checked = false;
-                Properties.Settings.Default.txtCboxState = this.txtCbox.Checked;
+                Properties.Settings.Default.txtCboxState = false;
             }
         }
 
         private void txtCbox_CheckedChanged(object sender, EventArgs e)
         {
             scpTxt = true;
-            //txtChecked = this.txtCbox.Checked;
-            Properties.Settings.Default.txtCboxState = this.txtCbox.Checked;
+            txtChecked = true;
         }
 
         private void imageCbox_CheckedChanged(object sender, EventArgs e)
         {
             scpImages = true;
-
         }
 
         private void linksCbox_CheckedChanged(object sender, EventArgs e)
@@ -117,8 +116,13 @@ namespace WebScrape2025
 
         private void saveBttn_Click(object sender, EventArgs e)
         {
-            txtChecked = true;
-            Properties.Settings.Default.Save();
+            if (txtChecked == true)
+            {
+                saveTxt = true;
+                Properties.Settings.Default.Save();
+            }
+            //txtChecked = true;
+            //Properties.Settings.Default.Save();
 
             //Properties.Settings.Default.imageCboxState = this.imageCbox.Checked;
             //Properties.Settings.Default.Save();
