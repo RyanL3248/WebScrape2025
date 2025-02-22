@@ -30,8 +30,11 @@ namespace WebScrape2025
         public bool putDate;
         private bool origDateCboxState;
         public bool putSource;
+        private bool origSourceCboxState;
         public bool parOrg;
+        private bool origParCboxState;
         public bool listOrg;
+        private bool origListCboxState;
 
         public Customization()
         {
@@ -71,6 +74,15 @@ namespace WebScrape2025
 
             this.dateCbox.Checked = Properties.Settings.Default.dateCboxState;
             origDateCboxState = this.dateCbox.Checked;
+
+            this.sourceCbox.Checked = Properties.Settings.Default.sourceCboxState;
+            origSourceCboxState = this.sourceCbox.Checked;
+
+            this.paragraphCbox.Checked = Properties.Settings.Default.paragraphCboxState;
+            origParCboxState = this.paragraphCbox.Checked;
+
+            this.listCbox.Checked = Properties.Settings.Default.listCboxState;
+            origListCboxState = this.listCbox.Checked;
           
         }
         private void Customization_FormClosing(object sender, FormClosingEventArgs e)
@@ -82,6 +94,9 @@ namespace WebScrape2025
             Properties.Settings.Default.statsCboxState = origStatCboxState;
             Properties.Settings.Default.titleCboxState = origTitleCboxState;
             Properties.Settings.Default.dateCboxState = origDateCboxState;
+            Properties.Settings.Default.sourceCboxState = origSourceCboxState;
+            Properties.Settings.Default.paragraphCboxState = origParCboxState;
+            Properties.Settings.Default.listCboxState = origListCboxState;
         }
 
         private void homeBttn_Click(object sender, EventArgs e)
@@ -107,10 +122,24 @@ namespace WebScrape2025
             this.dateCbox.Checked = origDateCboxState;
             Properties.Settings.Default.dateCboxState = origDateCboxState;
 
+            this.sourceCbox.Checked = origSourceCboxState;
+            Properties.Settings.Default.sourceCboxState = origSourceCboxState;
+
+            this.paragraphCbox.Checked = origParCboxState;
+            Properties.Settings.Default.paragraphCboxState = origParCboxState;
+
+            this.listCbox.Checked = origListCboxState;
+            Properties.Settings.Default.listCboxState = origListCboxState;
+
             homeScreenForm.Location = this.Location;
             homeScreenForm.Show();
 
             this.Hide();
+        }
+
+        private void keywordTxtbox_TextChanged(object sender, EventArgs e)
+        {
+            Console.WriteLine($"this is the textbox entry: {keywordTxtbox.Text}");
         }
 
         private void txtCbox_CheckedChanged(object sender, EventArgs e)
@@ -157,17 +186,20 @@ namespace WebScrape2025
 
         private void sourceCbox_CheckedChanged(object sender, EventArgs e)
         {
-            putSource = true;
+            Properties.Settings.Default.sourceCboxState = this.sourceCbox.Checked;
+            putSource = this.sourceCbox.Checked;
         }
 
         private void paragraphCbox_CheckedChanged(object sender, EventArgs e)
         {
-            parOrg = true;
+            Properties.Settings.Default.paragraphCboxState = this.paragraphCbox.Checked;
+            parOrg = this.paragraphCbox.Checked;
         }
 
         private void listCbox_CheckedChanged(object sender, EventArgs e)
         {
-            listOrg = true;
+            Properties.Settings.Default.listCboxState = this.listCbox.Checked;
+            listOrg = this.listCbox.Checked;
         }
 
         private void saveBttn_Click(object sender, EventArgs e)
@@ -181,6 +213,9 @@ namespace WebScrape2025
             origStatCboxState = this.statsCbox.Checked;
             origTitleCboxState = this.titleCbox.Checked;
             origDateCboxState = this.dateCbox.Checked;
+            origSourceCboxState = this.sourceCbox.Checked;
+            origParCboxState = this.paragraphCbox.Checked;
+            origListCboxState = this.listCbox.Checked;
 
         }
     }

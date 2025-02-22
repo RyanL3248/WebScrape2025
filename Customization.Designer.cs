@@ -35,11 +35,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.keywordTxtbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.dateCbox = new System.Windows.Forms.CheckBox();
-            this.sourceCbox = new System.Windows.Forms.CheckBox();
-            this.paragraphCbox = new System.Windows.Forms.CheckBox();
             this.listCbox = new System.Windows.Forms.CheckBox();
             this.saveBttn = new System.Windows.Forms.Button();
+            this.paragraphCbox = new System.Windows.Forms.CheckBox();
+            this.sourceCbox = new System.Windows.Forms.CheckBox();
+            this.dateCbox = new System.Windows.Forms.CheckBox();
             this.titleCbox = new System.Windows.Forms.CheckBox();
             this.statsCbox = new System.Windows.Forms.CheckBox();
             this.quotesCbox = new System.Windows.Forms.CheckBox();
@@ -116,6 +116,7 @@
             this.keywordTxtbox.Name = "keywordTxtbox";
             this.keywordTxtbox.Size = new System.Drawing.Size(329, 22);
             this.keywordTxtbox.TabIndex = 7;
+            this.keywordTxtbox.TextChanged += new System.EventHandler(this.keywordTxtbox_TextChanged);
             // 
             // label4
             // 
@@ -128,51 +129,12 @@
             this.label4.TabIndex = 12;
             this.label4.Text = "Organize:";
             // 
-            // dateCbox
-            // 
-            this.dateCbox.AutoSize = true;
-            this.dateCbox.BackColor = System.Drawing.Color.Gold;
-            this.dateCbox.Checked = global::WebScrape2025.Properties.Settings.Default.dateCboxState;
-            this.dateCbox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::WebScrape2025.Properties.Settings.Default, "dateCboxState", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.dateCbox.Location = new System.Drawing.Point(197, 353);
-            this.dateCbox.Margin = new System.Windows.Forms.Padding(4);
-            this.dateCbox.Name = "dateCbox";
-            this.dateCbox.Size = new System.Drawing.Size(58, 20);
-            this.dateCbox.TabIndex = 14;
-            this.dateCbox.Text = "Date";
-            this.dateCbox.UseVisualStyleBackColor = false;
-            this.dateCbox.CheckedChanged += new System.EventHandler(this.dateCbox_CheckedChanged);
-            // 
-            // sourceCbox
-            // 
-            this.sourceCbox.AutoSize = true;
-            this.sourceCbox.BackColor = System.Drawing.Color.Gold;
-            this.sourceCbox.Location = new System.Drawing.Point(285, 353);
-            this.sourceCbox.Margin = new System.Windows.Forms.Padding(4);
-            this.sourceCbox.Name = "sourceCbox";
-            this.sourceCbox.Size = new System.Drawing.Size(72, 20);
-            this.sourceCbox.TabIndex = 15;
-            this.sourceCbox.Text = "Source";
-            this.sourceCbox.UseVisualStyleBackColor = false;
-            this.sourceCbox.CheckedChanged += new System.EventHandler(this.sourceCbox_CheckedChanged);
-            // 
-            // paragraphCbox
-            // 
-            this.paragraphCbox.AutoSize = true;
-            this.paragraphCbox.BackColor = System.Drawing.Color.Gold;
-            this.paragraphCbox.Location = new System.Drawing.Point(69, 394);
-            this.paragraphCbox.Margin = new System.Windows.Forms.Padding(4);
-            this.paragraphCbox.Name = "paragraphCbox";
-            this.paragraphCbox.Size = new System.Drawing.Size(191, 20);
-            this.paragraphCbox.TabIndex = 16;
-            this.paragraphCbox.Text = "Paragraph by Content View";
-            this.paragraphCbox.UseVisualStyleBackColor = false;
-            this.paragraphCbox.CheckedChanged += new System.EventHandler(this.paragraphCbox_CheckedChanged);
-            // 
             // listCbox
             // 
             this.listCbox.AutoSize = true;
             this.listCbox.BackColor = System.Drawing.Color.Gold;
+            this.listCbox.Checked = global::WebScrape2025.Properties.Settings.Default.listCboxState;
+            this.listCbox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::WebScrape2025.Properties.Settings.Default, "listCboxState", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.listCbox.Location = new System.Drawing.Point(69, 433);
             this.listCbox.Margin = new System.Windows.Forms.Padding(4);
             this.listCbox.Name = "listCbox";
@@ -198,6 +160,51 @@
             this.saveBttn.Text = "SAVE";
             this.saveBttn.UseVisualStyleBackColor = false;
             this.saveBttn.Click += new System.EventHandler(this.saveBttn_Click);
+            // 
+            // paragraphCbox
+            // 
+            this.paragraphCbox.AutoSize = true;
+            this.paragraphCbox.BackColor = System.Drawing.Color.Gold;
+            this.paragraphCbox.Checked = global::WebScrape2025.Properties.Settings.Default.paragraphCboxState;
+            this.paragraphCbox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::WebScrape2025.Properties.Settings.Default, "paragraphCboxState", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.paragraphCbox.Location = new System.Drawing.Point(69, 394);
+            this.paragraphCbox.Margin = new System.Windows.Forms.Padding(4);
+            this.paragraphCbox.Name = "paragraphCbox";
+            this.paragraphCbox.Size = new System.Drawing.Size(191, 20);
+            this.paragraphCbox.TabIndex = 16;
+            this.paragraphCbox.Text = "Paragraph by Content View";
+            this.paragraphCbox.UseVisualStyleBackColor = false;
+            this.paragraphCbox.CheckedChanged += new System.EventHandler(this.paragraphCbox_CheckedChanged);
+            // 
+            // sourceCbox
+            // 
+            this.sourceCbox.AutoSize = true;
+            this.sourceCbox.BackColor = System.Drawing.Color.Gold;
+            this.sourceCbox.Checked = global::WebScrape2025.Properties.Settings.Default.sourceCboxState;
+            this.sourceCbox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::WebScrape2025.Properties.Settings.Default, "sourceCboxState", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.sourceCbox.Location = new System.Drawing.Point(285, 353);
+            this.sourceCbox.Margin = new System.Windows.Forms.Padding(4);
+            this.sourceCbox.Name = "sourceCbox";
+            this.sourceCbox.Size = new System.Drawing.Size(72, 20);
+            this.sourceCbox.TabIndex = 15;
+            this.sourceCbox.Text = "Source";
+            this.sourceCbox.UseVisualStyleBackColor = false;
+            this.sourceCbox.CheckedChanged += new System.EventHandler(this.sourceCbox_CheckedChanged);
+            // 
+            // dateCbox
+            // 
+            this.dateCbox.AutoSize = true;
+            this.dateCbox.BackColor = System.Drawing.Color.Gold;
+            this.dateCbox.Checked = global::WebScrape2025.Properties.Settings.Default.dateCboxState;
+            this.dateCbox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::WebScrape2025.Properties.Settings.Default, "dateCboxState", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.dateCbox.Location = new System.Drawing.Point(197, 353);
+            this.dateCbox.Margin = new System.Windows.Forms.Padding(4);
+            this.dateCbox.Name = "dateCbox";
+            this.dateCbox.Size = new System.Drawing.Size(58, 20);
+            this.dateCbox.TabIndex = 14;
+            this.dateCbox.Text = "Date";
+            this.dateCbox.UseVisualStyleBackColor = false;
+            this.dateCbox.CheckedChanged += new System.EventHandler(this.dateCbox_CheckedChanged);
             // 
             // titleCbox
             // 

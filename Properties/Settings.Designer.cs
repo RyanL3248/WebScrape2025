@@ -106,5 +106,41 @@ namespace WebScrape2025.Properties {
                 this["dateCboxState"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool sourceCboxState {
+            get {
+                return ((bool)(this["sourceCboxState"]));
+            }
+            set {
+                this["sourceCboxState"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool paragraphCboxState {
+            get {
+                return ((bool)(this["paragraphCboxState"]));
+            }
+            set {
+                this["paragraphCboxState"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool listCboxState {
+            get {
+                return ((bool)(this["listCboxState"]));
+            }
+            set {
+                this["listCboxState"] = value;
+            }
+        }
     }
 }
