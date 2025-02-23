@@ -142,5 +142,17 @@ namespace WebScrape2025.Properties {
                 this["listCboxState"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string keywordTxt {
+            get {
+                return ((string)(this["keywordTxt"]));
+            }
+            set {
+                this["keywordTxt"] = value;
+            }
+        }
     }
 }

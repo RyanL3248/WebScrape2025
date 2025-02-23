@@ -33,10 +33,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.keywordTxtbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.listCbox = new System.Windows.Forms.CheckBox();
             this.saveBttn = new System.Windows.Forms.Button();
+            this.listCbox = new System.Windows.Forms.CheckBox();
             this.paragraphCbox = new System.Windows.Forms.CheckBox();
             this.sourceCbox = new System.Windows.Forms.CheckBox();
             this.dateCbox = new System.Windows.Forms.CheckBox();
@@ -45,6 +44,7 @@
             this.quotesCbox = new System.Windows.Forms.CheckBox();
             this.linksCbox = new System.Windows.Forms.CheckBox();
             this.imageCbox = new System.Windows.Forms.CheckBox();
+            this.keywordTxtbox = new System.Windows.Forms.TextBox();
             this.txtCbox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
@@ -109,15 +109,6 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Specific Keywords (separated by commas):";
             // 
-            // keywordTxtbox
-            // 
-            this.keywordTxtbox.Location = new System.Drawing.Point(69, 164);
-            this.keywordTxtbox.Margin = new System.Windows.Forms.Padding(4);
-            this.keywordTxtbox.Name = "keywordTxtbox";
-            this.keywordTxtbox.Size = new System.Drawing.Size(329, 22);
-            this.keywordTxtbox.TabIndex = 7;
-            this.keywordTxtbox.TextChanged += new System.EventHandler(this.keywordTxtbox_TextChanged);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -128,21 +119,6 @@
             this.label4.Size = new System.Drawing.Size(64, 16);
             this.label4.TabIndex = 12;
             this.label4.Text = "Organize:";
-            // 
-            // listCbox
-            // 
-            this.listCbox.AutoSize = true;
-            this.listCbox.BackColor = System.Drawing.Color.Gold;
-            this.listCbox.Checked = global::WebScrape2025.Properties.Settings.Default.listCboxState;
-            this.listCbox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::WebScrape2025.Properties.Settings.Default, "listCboxState", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.listCbox.Location = new System.Drawing.Point(69, 433);
-            this.listCbox.Margin = new System.Windows.Forms.Padding(4);
-            this.listCbox.Name = "listCbox";
-            this.listCbox.Size = new System.Drawing.Size(81, 20);
-            this.listCbox.TabIndex = 17;
-            this.listCbox.Text = "List View";
-            this.listCbox.UseVisualStyleBackColor = false;
-            this.listCbox.CheckedChanged += new System.EventHandler(this.listCbox_CheckedChanged);
             // 
             // saveBttn
             // 
@@ -160,6 +136,21 @@
             this.saveBttn.Text = "SAVE";
             this.saveBttn.UseVisualStyleBackColor = false;
             this.saveBttn.Click += new System.EventHandler(this.saveBttn_Click);
+            // 
+            // listCbox
+            // 
+            this.listCbox.AutoSize = true;
+            this.listCbox.BackColor = System.Drawing.Color.Gold;
+            this.listCbox.Checked = global::WebScrape2025.Properties.Settings.Default.listCboxState;
+            this.listCbox.DataBindings.Add(new System.Windows.Forms.Binding("Checked", global::WebScrape2025.Properties.Settings.Default, "listCboxState", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.listCbox.Location = new System.Drawing.Point(69, 433);
+            this.listCbox.Margin = new System.Windows.Forms.Padding(4);
+            this.listCbox.Name = "listCbox";
+            this.listCbox.Size = new System.Drawing.Size(81, 20);
+            this.listCbox.TabIndex = 17;
+            this.listCbox.Text = "List View";
+            this.listCbox.UseVisualStyleBackColor = false;
+            this.listCbox.CheckedChanged += new System.EventHandler(this.listCbox_CheckedChanged);
             // 
             // paragraphCbox
             // 
@@ -280,6 +271,18 @@
             this.imageCbox.Text = "Images";
             this.imageCbox.UseVisualStyleBackColor = false;
             this.imageCbox.CheckedChanged += new System.EventHandler(this.imageCbox_CheckedChanged);
+            // 
+            // keywordTxtbox
+            // 
+            this.keywordTxtbox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::WebScrape2025.Properties.Settings.Default, "keywordTxt", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.keywordTxtbox.Location = new System.Drawing.Point(69, 164);
+            this.keywordTxtbox.Margin = new System.Windows.Forms.Padding(4);
+            this.keywordTxtbox.Name = "keywordTxtbox";
+            this.keywordTxtbox.Size = new System.Drawing.Size(329, 22);
+            this.keywordTxtbox.TabIndex = 7;
+            this.keywordTxtbox.Text = global::WebScrape2025.Properties.Settings.Default.keywordTxt;
+            this.keywordTxtbox.TextChanged += new System.EventHandler(this.keywordTxtbox_TextChanged);
+            this.keywordTxtbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.keywordTxtbox_KeyPress);
             // 
             // txtCbox
             // 

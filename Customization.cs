@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,6 +36,10 @@ namespace WebScrape2025
         private bool origParCboxState;
         public bool listOrg;
         private bool origListCboxState;
+        public string[] keywords;
+        public string[] origKeywords;
+        private string pattern = @",\s*";
+        private string result;
 
         public Customization()
         {
@@ -48,7 +53,6 @@ namespace WebScrape2025
             homeScreenForm = homeScreen;
 
            this.Load += Customization_Load;
-           this.FormClosing += Customization_FormClosing;
            this.MinimumSize = new Size(369, 489);
         }
 
@@ -83,20 +87,11 @@ namespace WebScrape2025
 
             this.listCbox.Checked = Properties.Settings.Default.listCboxState;
             origListCboxState = this.listCbox.Checked;
-          
-        }
-        private void Customization_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Properties.Settings.Default.txtCboxState = origTxtCboxState;
-            Properties.Settings.Default.imageCboxState = origImgCboxState;
-            Properties.Settings.Default.linksCboxState = origLinkCboxState;
-            Properties.Settings.Default.quoteCboxState = origQuoteCboxState;
-            Properties.Settings.Default.statsCboxState = origStatCboxState;
-            Properties.Settings.Default.titleCboxState = origTitleCboxState;
-            Properties.Settings.Default.dateCboxState = origDateCboxState;
-            Properties.Settings.Default.sourceCboxState = origSourceCboxState;
-            Properties.Settings.Default.paragraphCboxState = origParCboxState;
-            Properties.Settings.Default.listCboxState = origListCboxState;
+
+            this.keywordTxtbox.Text = Properties.Settings.Default.keywordTxt;
+            origKeywords = Regex.Split(this.keywordTxtbox.Text, @"[\s,]+");
+            
+
         }
 
         private void homeBttn_Click(object sender, EventArgs e)
@@ -131,6 +126,12 @@ namespace WebScrape2025
             this.listCbox.Checked = origListCboxState;
             Properties.Settings.Default.listCboxState = origListCboxState;
 
+            if (!(origKeywords == null))
+            {
+                this.keywordTxtbox.Text = string.Join(", ", origKeywords);
+                Properties.Settings.Default.keywordTxt = string.Join(", ", origKeywords);
+            }
+
             homeScreenForm.Location = this.Location;
             homeScreenForm.Show();
 
@@ -139,7 +140,15 @@ namespace WebScrape2025
 
         private void keywordTxtbox_TextChanged(object sender, EventArgs e)
         {
-            Console.WriteLine($"this is the textbox entry: {keywordTxtbox.Text}");
+            keywords = Regex.Split(keywordTxtbox.Text, pattern);  
+        }
+
+        private void keywordTxtbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ' && e.KeyChar != ',') 
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtCbox_CheckedChanged(object sender, EventArgs e)
@@ -217,6 +226,7 @@ namespace WebScrape2025
             origParCboxState = this.paragraphCbox.Checked;
             origListCboxState = this.listCbox.Checked;
 
+            origKeywords = keywords;
         }
     }
 }
