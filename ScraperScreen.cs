@@ -37,8 +37,8 @@ namespace WebScrape2025
         {
             this.StartPosition = FormStartPosition.CenterScreen;
 
-            //this.websiteTxtbox.Text = Properties.Settings.Default.websiteTxt;
-            //origWebsiteUrl = this.websiteTxtbox.Text;
+            this.websiteTxtbox.Text = Properties.Settings.Default.websiteTxt;
+            origWebsiteUrl = this.websiteTxtbox.Text;
         }
 
         private void homeBttn_Click(object sender, EventArgs e)
@@ -55,7 +55,7 @@ namespace WebScrape2025
 
         private void websiteTxtbox_TextChanged(object sender, EventArgs e)
         {
-            //websiteUrl = this.websiteTxtbox.Text;
+            websiteUrl = this.websiteTxtbox.Text;
         }
 
         private void saveBttn_Click(object sender, EventArgs e)
