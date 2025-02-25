@@ -154,5 +154,17 @@ namespace WebScrape2025.Properties {
                 this["keywordTxt"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string websiteTxt {
+            get {
+                return ((string)(this["websiteTxt"]));
+            }
+            set {
+                this["websiteTxt"] = value;
+            }
+        }
     }
 }

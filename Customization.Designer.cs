@@ -304,7 +304,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.ClientSize = new System.Drawing.Size(471, 554);
+            this.ClientSize = new System.Drawing.Size(472, 554);
             this.Controls.Add(this.saveBttn);
             this.Controls.Add(this.listCbox);
             this.Controls.Add(this.paragraphCbox);

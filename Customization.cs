@@ -39,7 +39,6 @@ namespace WebScrape2025
         public string[] keywords;
         public string[] origKeywords;
         private string pattern = @",\s*";
-        private string result;
 
         public Customization()
         {
