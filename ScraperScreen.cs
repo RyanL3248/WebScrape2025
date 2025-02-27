@@ -15,6 +15,7 @@ namespace WebScrape2025
         private HomeScreen homeScreenForm;
         public string websiteUrl;
         public string origWebsiteUrl;
+        private List<String> websites = new List<String>();
         private bool scpDone;
         public ScraperScreen()
         {
@@ -43,7 +44,7 @@ namespace WebScrape2025
 
         private void homeBttn_Click(object sender, EventArgs e)
         {
-            //this.websiteTxtbox.Text = origWebsiteUrl;
+            this.websiteTxtbox.Text = origWebsiteUrl;
             Properties.Settings.Default.websiteTxt = origWebsiteUrl;
 
             homeScreenForm.Location = this.Location;
@@ -56,6 +57,11 @@ namespace WebScrape2025
         private void websiteTxtbox_TextChanged(object sender, EventArgs e)
         {
             websiteUrl = this.websiteTxtbox.Text;
+        }
+
+        private void websiteTxtbox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void saveBttn_Click(object sender, EventArgs e)
