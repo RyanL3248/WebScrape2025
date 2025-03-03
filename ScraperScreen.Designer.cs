@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScraperScreen));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.websiteTxtbox = new System.Windows.Forms.TextBox();
@@ -130,74 +131,80 @@
             // downloadBttn
             // 
             this.downloadBttn.BackColor = System.Drawing.Color.Gold;
+            this.downloadBttn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("downloadBttn.BackgroundImage")));
+            this.downloadBttn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.downloadBttn.FlatAppearance.BorderSize = 2;
             this.downloadBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.downloadBttn.Location = new System.Drawing.Point(-1, 428);
             this.downloadBttn.Name = "downloadBttn";
             this.downloadBttn.Size = new System.Drawing.Size(62, 92);
             this.downloadBttn.TabIndex = 5;
-            this.downloadBttn.Text = "button6";
             this.downloadBttn.UseVisualStyleBackColor = false;
             // 
             // saveBttn
             // 
             this.saveBttn.BackColor = System.Drawing.Color.Gold;
+            this.saveBttn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("saveBttn.BackgroundImage")));
+            this.saveBttn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.saveBttn.FlatAppearance.BorderSize = 2;
             this.saveBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveBttn.Location = new System.Drawing.Point(-1, 336);
             this.saveBttn.Name = "saveBttn";
             this.saveBttn.Size = new System.Drawing.Size(62, 94);
             this.saveBttn.TabIndex = 4;
-            this.saveBttn.Text = "button5";
             this.saveBttn.UseVisualStyleBackColor = false;
             this.saveBttn.Click += new System.EventHandler(this.saveBttn_Click);
             // 
             // orgBttn
             // 
             this.orgBttn.BackColor = System.Drawing.Color.Gold;
+            this.orgBttn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("orgBttn.BackgroundImage")));
+            this.orgBttn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.orgBttn.FlatAppearance.BorderSize = 2;
             this.orgBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.orgBttn.Location = new System.Drawing.Point(-1, 211);
             this.orgBttn.Name = "orgBttn";
             this.orgBttn.Size = new System.Drawing.Size(62, 129);
             this.orgBttn.TabIndex = 4;
-            this.orgBttn.Text = "button4";
             this.orgBttn.UseVisualStyleBackColor = false;
             // 
             // docsBttn
             // 
             this.docsBttn.BackColor = System.Drawing.Color.Gold;
+            this.docsBttn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("docsBttn.BackgroundImage")));
+            this.docsBttn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.docsBttn.FlatAppearance.BorderSize = 2;
             this.docsBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.docsBttn.Location = new System.Drawing.Point(-1, 140);
             this.docsBttn.Name = "docsBttn";
             this.docsBttn.Size = new System.Drawing.Size(62, 75);
             this.docsBttn.TabIndex = 3;
-            this.docsBttn.Text = "button3";
             this.docsBttn.UseVisualStyleBackColor = false;
             // 
             // wordBttn
             // 
             this.wordBttn.BackColor = System.Drawing.Color.Gold;
+            this.wordBttn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("wordBttn.BackgroundImage")));
+            this.wordBttn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.wordBttn.FlatAppearance.BorderSize = 2;
             this.wordBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.wordBttn.Location = new System.Drawing.Point(-1, 70);
             this.wordBttn.Name = "wordBttn";
             this.wordBttn.Size = new System.Drawing.Size(62, 75);
             this.wordBttn.TabIndex = 2;
-            this.wordBttn.Text = "button2";
             this.wordBttn.UseVisualStyleBackColor = false;
             // 
             // homeBttn
             // 
             this.homeBttn.BackColor = System.Drawing.Color.Gold;
+            this.homeBttn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("homeBttn.BackgroundImage")));
+            this.homeBttn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.homeBttn.FlatAppearance.BorderSize = 2;
             this.homeBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.homeBttn.Location = new System.Drawing.Point(-1, -1);
             this.homeBttn.Name = "homeBttn";
             this.homeBttn.Size = new System.Drawing.Size(62, 75);
             this.homeBttn.TabIndex = 1;
-            this.homeBttn.Text = "button1";
             this.homeBttn.UseVisualStyleBackColor = false;
             this.homeBttn.Click += new System.EventHandler(this.homeBttn_Click);
             // 
@@ -224,7 +231,6 @@
             this.websiteTxtbox2.Size = new System.Drawing.Size(319, 22);
             this.websiteTxtbox2.TabIndex = 4;
             this.websiteTxtbox2.Text = global::WebScrape2025.Properties.Settings.Default.websiteTxt2;
-            this.websiteTxtbox2.TextChanged += new System.EventHandler(this.websiteTxtbox2_TextChanged);
             // 
             // label2
             // 

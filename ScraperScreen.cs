@@ -59,11 +59,6 @@ namespace WebScrape2025
             websiteUrl = this.websiteTxtbox.Text;
         }
 
-        private void websiteTxtbox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void saveBttn_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.Save();
