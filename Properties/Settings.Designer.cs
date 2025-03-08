@@ -178,5 +178,17 @@ namespace WebScrape2025.Properties {
                 this["websiteTxt2"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int lastSelectedTab {
+            get {
+                return ((int)(this["lastSelectedTab"]));
+            }
+            set {
+                this["lastSelectedTab"] = value;
+            }
+        }
     }
 }
