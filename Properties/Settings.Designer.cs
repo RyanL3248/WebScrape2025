@@ -190,5 +190,41 @@ namespace WebScrape2025.Properties {
                 this["lastSelectedTab"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string websiteTxt3 {
+            get {
+                return ((string)(this["websiteTxt3"]));
+            }
+            set {
+                this["websiteTxt3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string websiteTxt4 {
+            get {
+                return ((string)(this["websiteTxt4"]));
+            }
+            set {
+                this["websiteTxt4"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string websiteTxt5 {
+            get {
+                return ((string)(this["websiteTxt5"]));
+            }
+            set {
+                this["websiteTxt5"] = value;
+            }
+        }
     }
 }
