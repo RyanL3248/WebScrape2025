@@ -161,9 +161,9 @@
             this.paragraphCbox.Location = new System.Drawing.Point(69, 394);
             this.paragraphCbox.Margin = new System.Windows.Forms.Padding(4);
             this.paragraphCbox.Name = "paragraphCbox";
-            this.paragraphCbox.Size = new System.Drawing.Size(191, 20);
+            this.paragraphCbox.Size = new System.Drawing.Size(244, 20);
             this.paragraphCbox.TabIndex = 16;
-            this.paragraphCbox.Text = "Paragraph by Content View";
+            this.paragraphCbox.Text = "Paragraph by Content View (Default)\r\n";
             this.paragraphCbox.UseVisualStyleBackColor = false;
             this.paragraphCbox.CheckedChanged += new System.EventHandler(this.paragraphCbox_CheckedChanged);
             // 

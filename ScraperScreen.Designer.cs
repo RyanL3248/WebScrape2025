@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScraperScreen));
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.scrapeBttn2 = new System.Windows.Forms.Button();
             this.websiteTxtbox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.backBttn2 = new System.Windows.Forms.Button();
@@ -41,6 +42,7 @@
             this.wordBttn2 = new System.Windows.Forms.Button();
             this.homeBttn2 = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.scrapeBttn = new System.Windows.Forms.Button();
             this.websiteTxtbox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.backBttn = new System.Windows.Forms.Button();
@@ -53,6 +55,7 @@
             this.homeBttn = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.scrapeBttn3 = new System.Windows.Forms.Button();
             this.websiteTxtbox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -64,6 +67,7 @@
             this.homeBttn3 = new System.Windows.Forms.Button();
             this.backBttn3 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.scrapeBttn4 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.downloadBttn4 = new System.Windows.Forms.Button();
             this.saveBttn4 = new System.Windows.Forms.Button();
@@ -75,6 +79,7 @@
             this.websiteTxtbox4 = new System.Windows.Forms.TextBox();
             this.backBttn4 = new System.Windows.Forms.Button();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.scrapeBttn5 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.downloadBttn5 = new System.Windows.Forms.Button();
             this.saveBttn5 = new System.Windows.Forms.Button();
@@ -85,11 +90,6 @@
             this.websiteTxtbox5 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.backBttn5 = new System.Windows.Forms.Button();
-            this.scrapeBttn = new System.Windows.Forms.Button();
-            this.scrapeBttn2 = new System.Windows.Forms.Button();
-            this.scrapeBttn3 = new System.Windows.Forms.Button();
-            this.scrapeBttn4 = new System.Windows.Forms.Button();
-            this.scrapeBttn5 = new System.Windows.Forms.Button();
             this.tabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -113,16 +113,30 @@
             this.tabPage2.Controls.Add(this.backBttn2);
             this.tabPage2.Controls.Add(this.panel2);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(466, 521);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage2.Size = new System.Drawing.Size(467, 521);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Scraper 2";
+            // 
+            // scrapeBttn2
+            // 
+            this.scrapeBttn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.scrapeBttn2.Location = new System.Drawing.Point(281, 38);
+            this.scrapeBttn2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.scrapeBttn2.Name = "scrapeBttn2";
+            this.scrapeBttn2.Size = new System.Drawing.Size(77, 28);
+            this.scrapeBttn2.TabIndex = 5;
+            this.scrapeBttn2.Text = "Scrape";
+            this.scrapeBttn2.UseVisualStyleBackColor = true;
+            this.scrapeBttn2.Click += new System.EventHandler(this.scrapeBttn_Click);
             // 
             // websiteTxtbox2
             // 
             this.websiteTxtbox2.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::WebScrape2025.Properties.Settings.Default, "websiteTxt2", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.websiteTxtbox2.Location = new System.Drawing.Point(40, 74);
+            this.websiteTxtbox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.websiteTxtbox2.Name = "websiteTxtbox2";
             this.websiteTxtbox2.Size = new System.Drawing.Size(319, 22);
             this.websiteTxtbox2.TabIndex = 4;
@@ -134,7 +148,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Orange;
-            this.label2.Location = new System.Drawing.Point(43, 51);
+            this.label2.Location = new System.Drawing.Point(43, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 16);
             this.label2.TabIndex = 3;
@@ -145,6 +159,7 @@
             this.backBttn2.BackColor = System.Drawing.Color.Orange;
             this.backBttn2.Enabled = false;
             this.backBttn2.Location = new System.Drawing.Point(21, 26);
+            this.backBttn2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.backBttn2.Name = "backBttn2";
             this.backBttn2.Size = new System.Drawing.Size(357, 475);
             this.backBttn2.TabIndex = 2;
@@ -160,6 +175,7 @@
             this.panel2.Controls.Add(this.wordBttn2);
             this.panel2.Controls.Add(this.homeBttn2);
             this.panel2.Location = new System.Drawing.Point(401, -1);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(62, 521);
             this.panel2.TabIndex = 1;
@@ -172,8 +188,9 @@
             this.downloadBttn2.FlatAppearance.BorderSize = 2;
             this.downloadBttn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.downloadBttn2.Location = new System.Drawing.Point(-1, 428);
+            this.downloadBttn2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.downloadBttn2.Name = "downloadBttn2";
-            this.downloadBttn2.Size = new System.Drawing.Size(62, 92);
+            this.downloadBttn2.Size = new System.Drawing.Size(61, 92);
             this.downloadBttn2.TabIndex = 5;
             this.downloadBttn2.UseVisualStyleBackColor = false;
             // 
@@ -185,8 +202,9 @@
             this.saveBttn2.FlatAppearance.BorderSize = 2;
             this.saveBttn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveBttn2.Location = new System.Drawing.Point(-1, 336);
+            this.saveBttn2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.saveBttn2.Name = "saveBttn2";
-            this.saveBttn2.Size = new System.Drawing.Size(62, 94);
+            this.saveBttn2.Size = new System.Drawing.Size(61, 94);
             this.saveBttn2.TabIndex = 4;
             this.saveBttn2.UseVisualStyleBackColor = false;
             this.saveBttn2.Click += new System.EventHandler(this.saveBttn_Click);
@@ -198,9 +216,10 @@
             this.orgBttn2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.orgBttn2.FlatAppearance.BorderSize = 2;
             this.orgBttn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.orgBttn2.Location = new System.Drawing.Point(-1, 211);
+            this.orgBttn2.Location = new System.Drawing.Point(-1, 210);
+            this.orgBttn2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.orgBttn2.Name = "orgBttn2";
-            this.orgBttn2.Size = new System.Drawing.Size(62, 129);
+            this.orgBttn2.Size = new System.Drawing.Size(61, 129);
             this.orgBttn2.TabIndex = 4;
             this.orgBttn2.UseVisualStyleBackColor = false;
             // 
@@ -212,8 +231,9 @@
             this.docsBttn2.FlatAppearance.BorderSize = 2;
             this.docsBttn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.docsBttn2.Location = new System.Drawing.Point(-1, 140);
+            this.docsBttn2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.docsBttn2.Name = "docsBttn2";
-            this.docsBttn2.Size = new System.Drawing.Size(62, 75);
+            this.docsBttn2.Size = new System.Drawing.Size(61, 75);
             this.docsBttn2.TabIndex = 3;
             this.docsBttn2.UseVisualStyleBackColor = false;
             // 
@@ -225,8 +245,9 @@
             this.wordBttn2.FlatAppearance.BorderSize = 2;
             this.wordBttn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.wordBttn2.Location = new System.Drawing.Point(-1, 70);
+            this.wordBttn2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.wordBttn2.Name = "wordBttn2";
-            this.wordBttn2.Size = new System.Drawing.Size(62, 75);
+            this.wordBttn2.Size = new System.Drawing.Size(61, 75);
             this.wordBttn2.TabIndex = 2;
             this.wordBttn2.UseVisualStyleBackColor = false;
             // 
@@ -238,8 +259,9 @@
             this.homeBttn2.FlatAppearance.BorderSize = 2;
             this.homeBttn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.homeBttn2.Location = new System.Drawing.Point(-1, -1);
+            this.homeBttn2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.homeBttn2.Name = "homeBttn2";
-            this.homeBttn2.Size = new System.Drawing.Size(62, 75);
+            this.homeBttn2.Size = new System.Drawing.Size(61, 75);
             this.homeBttn2.TabIndex = 1;
             this.homeBttn2.UseVisualStyleBackColor = false;
             this.homeBttn2.Click += new System.EventHandler(this.homeBttn_Click);
@@ -254,16 +276,30 @@
             this.tabPage1.Controls.Add(this.backBttn);
             this.tabPage1.Controls.Add(this.panel1);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(466, 521);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage1.Size = new System.Drawing.Size(467, 521);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Scraper 1";
+            // 
+            // scrapeBttn
+            // 
+            this.scrapeBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.scrapeBttn.Location = new System.Drawing.Point(281, 38);
+            this.scrapeBttn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.scrapeBttn.Name = "scrapeBttn";
+            this.scrapeBttn.Size = new System.Drawing.Size(77, 28);
+            this.scrapeBttn.TabIndex = 4;
+            this.scrapeBttn.Text = "Scrape";
+            this.scrapeBttn.UseVisualStyleBackColor = true;
+            this.scrapeBttn.Click += new System.EventHandler(this.scrapeBttn_Click);
             // 
             // websiteTxtbox
             // 
             this.websiteTxtbox.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::WebScrape2025.Properties.Settings.Default, "websiteTxt", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.websiteTxtbox.Location = new System.Drawing.Point(40, 74);
+            this.websiteTxtbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.websiteTxtbox.Name = "websiteTxtbox";
             this.websiteTxtbox.Size = new System.Drawing.Size(319, 22);
             this.websiteTxtbox.TabIndex = 3;
@@ -275,7 +311,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Orange;
-            this.label1.Location = new System.Drawing.Point(43, 51);
+            this.label1.Location = new System.Drawing.Point(43, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(90, 16);
             this.label1.TabIndex = 2;
@@ -286,6 +322,7 @@
             this.backBttn.BackColor = System.Drawing.Color.Orange;
             this.backBttn.Enabled = false;
             this.backBttn.Location = new System.Drawing.Point(21, 26);
+            this.backBttn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.backBttn.Name = "backBttn";
             this.backBttn.Size = new System.Drawing.Size(357, 475);
             this.backBttn.TabIndex = 1;
@@ -301,6 +338,7 @@
             this.panel1.Controls.Add(this.wordBttn);
             this.panel1.Controls.Add(this.homeBttn);
             this.panel1.Location = new System.Drawing.Point(401, -1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(62, 521);
             this.panel1.TabIndex = 0;
@@ -313,8 +351,9 @@
             this.downloadBttn.FlatAppearance.BorderSize = 2;
             this.downloadBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.downloadBttn.Location = new System.Drawing.Point(-1, 428);
+            this.downloadBttn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.downloadBttn.Name = "downloadBttn";
-            this.downloadBttn.Size = new System.Drawing.Size(62, 92);
+            this.downloadBttn.Size = new System.Drawing.Size(61, 92);
             this.downloadBttn.TabIndex = 5;
             this.downloadBttn.UseVisualStyleBackColor = false;
             // 
@@ -326,8 +365,9 @@
             this.saveBttn.FlatAppearance.BorderSize = 2;
             this.saveBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveBttn.Location = new System.Drawing.Point(-1, 336);
+            this.saveBttn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.saveBttn.Name = "saveBttn";
-            this.saveBttn.Size = new System.Drawing.Size(62, 94);
+            this.saveBttn.Size = new System.Drawing.Size(61, 94);
             this.saveBttn.TabIndex = 4;
             this.saveBttn.UseVisualStyleBackColor = false;
             this.saveBttn.Click += new System.EventHandler(this.saveBttn_Click);
@@ -339,9 +379,10 @@
             this.orgBttn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.orgBttn.FlatAppearance.BorderSize = 2;
             this.orgBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.orgBttn.Location = new System.Drawing.Point(-1, 211);
+            this.orgBttn.Location = new System.Drawing.Point(-1, 210);
+            this.orgBttn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.orgBttn.Name = "orgBttn";
-            this.orgBttn.Size = new System.Drawing.Size(62, 129);
+            this.orgBttn.Size = new System.Drawing.Size(61, 129);
             this.orgBttn.TabIndex = 4;
             this.orgBttn.UseVisualStyleBackColor = false;
             // 
@@ -353,8 +394,9 @@
             this.docsBttn.FlatAppearance.BorderSize = 2;
             this.docsBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.docsBttn.Location = new System.Drawing.Point(-1, 140);
+            this.docsBttn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.docsBttn.Name = "docsBttn";
-            this.docsBttn.Size = new System.Drawing.Size(62, 75);
+            this.docsBttn.Size = new System.Drawing.Size(61, 75);
             this.docsBttn.TabIndex = 3;
             this.docsBttn.UseVisualStyleBackColor = false;
             // 
@@ -366,8 +408,9 @@
             this.wordBttn.FlatAppearance.BorderSize = 2;
             this.wordBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.wordBttn.Location = new System.Drawing.Point(-1, 70);
+            this.wordBttn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.wordBttn.Name = "wordBttn";
-            this.wordBttn.Size = new System.Drawing.Size(62, 75);
+            this.wordBttn.Size = new System.Drawing.Size(61, 75);
             this.wordBttn.TabIndex = 2;
             this.wordBttn.UseVisualStyleBackColor = false;
             // 
@@ -379,8 +422,9 @@
             this.homeBttn.FlatAppearance.BorderSize = 2;
             this.homeBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.homeBttn.Location = new System.Drawing.Point(-1, -1);
+            this.homeBttn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.homeBttn.Name = "homeBttn";
-            this.homeBttn.Size = new System.Drawing.Size(62, 75);
+            this.homeBttn.Size = new System.Drawing.Size(61, 75);
             this.homeBttn.TabIndex = 1;
             this.homeBttn.UseVisualStyleBackColor = false;
             this.homeBttn.Click += new System.EventHandler(this.homeBttn_Click);
@@ -392,12 +436,14 @@
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Location = new System.Drawing.Point(0, 3);
+            this.tabControl1.Location = new System.Drawing.Point(0, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(474, 550);
+            this.tabControl1.Size = new System.Drawing.Size(475, 550);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
+            this.tabControl1.Click += new System.EventHandler(this.scrapeBttn_Click);
             // 
             // tabPage3
             // 
@@ -409,16 +455,29 @@
             this.tabPage3.Controls.Add(this.panel3);
             this.tabPage3.Controls.Add(this.backBttn3);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(466, 521);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage3.Size = new System.Drawing.Size(467, 521);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Scraper 3";
+            // 
+            // scrapeBttn3
+            // 
+            this.scrapeBttn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.scrapeBttn3.Location = new System.Drawing.Point(281, 38);
+            this.scrapeBttn3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.scrapeBttn3.Name = "scrapeBttn3";
+            this.scrapeBttn3.Size = new System.Drawing.Size(77, 28);
+            this.scrapeBttn3.TabIndex = 7;
+            this.scrapeBttn3.Text = "Scrape";
+            this.scrapeBttn3.UseVisualStyleBackColor = true;
             // 
             // websiteTxtbox3
             // 
             this.websiteTxtbox3.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::WebScrape2025.Properties.Settings.Default, "websiteTxt3", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.websiteTxtbox3.Location = new System.Drawing.Point(40, 74);
+            this.websiteTxtbox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.websiteTxtbox3.Name = "websiteTxtbox3";
             this.websiteTxtbox3.Size = new System.Drawing.Size(319, 22);
             this.websiteTxtbox3.TabIndex = 6;
@@ -429,7 +488,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Orange;
-            this.label3.Location = new System.Drawing.Point(43, 51);
+            this.label3.Location = new System.Drawing.Point(43, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 16);
             this.label3.TabIndex = 5;
@@ -445,6 +504,7 @@
             this.panel3.Controls.Add(this.wordBttn3);
             this.panel3.Controls.Add(this.homeBttn3);
             this.panel3.Location = new System.Drawing.Point(401, -1);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(62, 521);
             this.panel3.TabIndex = 4;
@@ -457,8 +517,9 @@
             this.downloadBttn3.FlatAppearance.BorderSize = 2;
             this.downloadBttn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.downloadBttn3.Location = new System.Drawing.Point(-1, 428);
+            this.downloadBttn3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.downloadBttn3.Name = "downloadBttn3";
-            this.downloadBttn3.Size = new System.Drawing.Size(62, 92);
+            this.downloadBttn3.Size = new System.Drawing.Size(61, 92);
             this.downloadBttn3.TabIndex = 5;
             this.downloadBttn3.UseVisualStyleBackColor = false;
             // 
@@ -470,8 +531,9 @@
             this.saveBttn3.FlatAppearance.BorderSize = 2;
             this.saveBttn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveBttn3.Location = new System.Drawing.Point(-1, 336);
+            this.saveBttn3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.saveBttn3.Name = "saveBttn3";
-            this.saveBttn3.Size = new System.Drawing.Size(62, 94);
+            this.saveBttn3.Size = new System.Drawing.Size(61, 94);
             this.saveBttn3.TabIndex = 4;
             this.saveBttn3.UseVisualStyleBackColor = false;
             this.saveBttn3.Click += new System.EventHandler(this.saveBttn_Click);
@@ -483,9 +545,10 @@
             this.orgBttn3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.orgBttn3.FlatAppearance.BorderSize = 2;
             this.orgBttn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.orgBttn3.Location = new System.Drawing.Point(-1, 211);
+            this.orgBttn3.Location = new System.Drawing.Point(-1, 210);
+            this.orgBttn3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.orgBttn3.Name = "orgBttn3";
-            this.orgBttn3.Size = new System.Drawing.Size(62, 129);
+            this.orgBttn3.Size = new System.Drawing.Size(61, 129);
             this.orgBttn3.TabIndex = 4;
             this.orgBttn3.UseVisualStyleBackColor = false;
             // 
@@ -497,8 +560,9 @@
             this.docsBttn3.FlatAppearance.BorderSize = 2;
             this.docsBttn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.docsBttn3.Location = new System.Drawing.Point(-1, 140);
+            this.docsBttn3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.docsBttn3.Name = "docsBttn3";
-            this.docsBttn3.Size = new System.Drawing.Size(62, 75);
+            this.docsBttn3.Size = new System.Drawing.Size(61, 75);
             this.docsBttn3.TabIndex = 3;
             this.docsBttn3.UseVisualStyleBackColor = false;
             // 
@@ -510,8 +574,9 @@
             this.wordBttn3.FlatAppearance.BorderSize = 2;
             this.wordBttn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.wordBttn3.Location = new System.Drawing.Point(-1, 70);
+            this.wordBttn3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.wordBttn3.Name = "wordBttn3";
-            this.wordBttn3.Size = new System.Drawing.Size(62, 75);
+            this.wordBttn3.Size = new System.Drawing.Size(61, 75);
             this.wordBttn3.TabIndex = 2;
             this.wordBttn3.UseVisualStyleBackColor = false;
             // 
@@ -523,8 +588,9 @@
             this.homeBttn3.FlatAppearance.BorderSize = 2;
             this.homeBttn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.homeBttn3.Location = new System.Drawing.Point(-1, -1);
+            this.homeBttn3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.homeBttn3.Name = "homeBttn3";
-            this.homeBttn3.Size = new System.Drawing.Size(62, 75);
+            this.homeBttn3.Size = new System.Drawing.Size(61, 75);
             this.homeBttn3.TabIndex = 1;
             this.homeBttn3.UseVisualStyleBackColor = false;
             this.homeBttn3.Click += new System.EventHandler(this.homeBttn_Click);
@@ -534,6 +600,7 @@
             this.backBttn3.BackColor = System.Drawing.Color.Orange;
             this.backBttn3.Enabled = false;
             this.backBttn3.Location = new System.Drawing.Point(21, 26);
+            this.backBttn3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.backBttn3.Name = "backBttn3";
             this.backBttn3.Size = new System.Drawing.Size(357, 475);
             this.backBttn3.TabIndex = 3;
@@ -549,11 +616,23 @@
             this.tabPage4.Controls.Add(this.websiteTxtbox4);
             this.tabPage4.Controls.Add(this.backBttn4);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(466, 521);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage4.Size = new System.Drawing.Size(467, 521);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Scraper 4";
+            // 
+            // scrapeBttn4
+            // 
+            this.scrapeBttn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.scrapeBttn4.Location = new System.Drawing.Point(281, 38);
+            this.scrapeBttn4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.scrapeBttn4.Name = "scrapeBttn4";
+            this.scrapeBttn4.Size = new System.Drawing.Size(77, 28);
+            this.scrapeBttn4.TabIndex = 9;
+            this.scrapeBttn4.Text = "Scrape";
+            this.scrapeBttn4.UseVisualStyleBackColor = true;
             // 
             // panel4
             // 
@@ -565,6 +644,7 @@
             this.panel4.Controls.Add(this.wordBttn4);
             this.panel4.Controls.Add(this.homeBttn4);
             this.panel4.Location = new System.Drawing.Point(401, -1);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(62, 521);
             this.panel4.TabIndex = 8;
@@ -577,8 +657,9 @@
             this.downloadBttn4.FlatAppearance.BorderSize = 2;
             this.downloadBttn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.downloadBttn4.Location = new System.Drawing.Point(-1, 428);
+            this.downloadBttn4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.downloadBttn4.Name = "downloadBttn4";
-            this.downloadBttn4.Size = new System.Drawing.Size(62, 92);
+            this.downloadBttn4.Size = new System.Drawing.Size(61, 92);
             this.downloadBttn4.TabIndex = 5;
             this.downloadBttn4.UseVisualStyleBackColor = false;
             // 
@@ -590,8 +671,9 @@
             this.saveBttn4.FlatAppearance.BorderSize = 2;
             this.saveBttn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveBttn4.Location = new System.Drawing.Point(-1, 336);
+            this.saveBttn4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.saveBttn4.Name = "saveBttn4";
-            this.saveBttn4.Size = new System.Drawing.Size(62, 94);
+            this.saveBttn4.Size = new System.Drawing.Size(61, 94);
             this.saveBttn4.TabIndex = 4;
             this.saveBttn4.UseVisualStyleBackColor = false;
             this.saveBttn4.Click += new System.EventHandler(this.saveBttn_Click);
@@ -603,9 +685,10 @@
             this.orgBttn4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.orgBttn4.FlatAppearance.BorderSize = 2;
             this.orgBttn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.orgBttn4.Location = new System.Drawing.Point(-1, 211);
+            this.orgBttn4.Location = new System.Drawing.Point(-1, 210);
+            this.orgBttn4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.orgBttn4.Name = "orgBttn4";
-            this.orgBttn4.Size = new System.Drawing.Size(62, 129);
+            this.orgBttn4.Size = new System.Drawing.Size(61, 129);
             this.orgBttn4.TabIndex = 4;
             this.orgBttn4.UseVisualStyleBackColor = false;
             // 
@@ -617,8 +700,9 @@
             this.docsBttn4.FlatAppearance.BorderSize = 2;
             this.docsBttn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.docsBttn4.Location = new System.Drawing.Point(-1, 140);
+            this.docsBttn4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.docsBttn4.Name = "docsBttn4";
-            this.docsBttn4.Size = new System.Drawing.Size(62, 75);
+            this.docsBttn4.Size = new System.Drawing.Size(61, 75);
             this.docsBttn4.TabIndex = 3;
             this.docsBttn4.UseVisualStyleBackColor = false;
             // 
@@ -630,8 +714,9 @@
             this.wordBttn4.FlatAppearance.BorderSize = 2;
             this.wordBttn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.wordBttn4.Location = new System.Drawing.Point(-1, 70);
+            this.wordBttn4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.wordBttn4.Name = "wordBttn4";
-            this.wordBttn4.Size = new System.Drawing.Size(62, 75);
+            this.wordBttn4.Size = new System.Drawing.Size(61, 75);
             this.wordBttn4.TabIndex = 2;
             this.wordBttn4.UseVisualStyleBackColor = false;
             // 
@@ -643,8 +728,9 @@
             this.homeBttn4.FlatAppearance.BorderSize = 2;
             this.homeBttn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.homeBttn4.Location = new System.Drawing.Point(-1, -1);
+            this.homeBttn4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.homeBttn4.Name = "homeBttn4";
-            this.homeBttn4.Size = new System.Drawing.Size(62, 75);
+            this.homeBttn4.Size = new System.Drawing.Size(61, 75);
             this.homeBttn4.TabIndex = 1;
             this.homeBttn4.UseVisualStyleBackColor = false;
             this.homeBttn4.Click += new System.EventHandler(this.homeBttn_Click);
@@ -653,7 +739,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Orange;
-            this.label4.Location = new System.Drawing.Point(43, 51);
+            this.label4.Location = new System.Drawing.Point(43, 50);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 16);
             this.label4.TabIndex = 6;
@@ -663,6 +749,7 @@
             // 
             this.websiteTxtbox4.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::WebScrape2025.Properties.Settings.Default, "websiteTxt4", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.websiteTxtbox4.Location = new System.Drawing.Point(40, 74);
+            this.websiteTxtbox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.websiteTxtbox4.Name = "websiteTxtbox4";
             this.websiteTxtbox4.Size = new System.Drawing.Size(319, 22);
             this.websiteTxtbox4.TabIndex = 7;
@@ -674,6 +761,7 @@
             this.backBttn4.BackColor = System.Drawing.Color.Orange;
             this.backBttn4.Enabled = false;
             this.backBttn4.Location = new System.Drawing.Point(21, 26);
+            this.backBttn4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.backBttn4.Name = "backBttn4";
             this.backBttn4.Size = new System.Drawing.Size(357, 475);
             this.backBttn4.TabIndex = 4;
@@ -689,11 +777,23 @@
             this.tabPage5.Controls.Add(this.label5);
             this.tabPage5.Controls.Add(this.backBttn5);
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(466, 521);
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabPage5.Size = new System.Drawing.Size(467, 521);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Scraper 5";
+            // 
+            // scrapeBttn5
+            // 
+            this.scrapeBttn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.scrapeBttn5.Location = new System.Drawing.Point(281, 38);
+            this.scrapeBttn5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.scrapeBttn5.Name = "scrapeBttn5";
+            this.scrapeBttn5.Size = new System.Drawing.Size(77, 28);
+            this.scrapeBttn5.TabIndex = 10;
+            this.scrapeBttn5.Text = "Scrape";
+            this.scrapeBttn5.UseVisualStyleBackColor = true;
             // 
             // panel5
             // 
@@ -705,6 +805,7 @@
             this.panel5.Controls.Add(this.wordBttn5);
             this.panel5.Controls.Add(this.homeBttn5);
             this.panel5.Location = new System.Drawing.Point(401, -1);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(62, 521);
             this.panel5.TabIndex = 9;
@@ -717,8 +818,9 @@
             this.downloadBttn5.FlatAppearance.BorderSize = 2;
             this.downloadBttn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.downloadBttn5.Location = new System.Drawing.Point(-1, 428);
+            this.downloadBttn5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.downloadBttn5.Name = "downloadBttn5";
-            this.downloadBttn5.Size = new System.Drawing.Size(62, 92);
+            this.downloadBttn5.Size = new System.Drawing.Size(61, 92);
             this.downloadBttn5.TabIndex = 5;
             this.downloadBttn5.UseVisualStyleBackColor = false;
             // 
@@ -730,8 +832,9 @@
             this.saveBttn5.FlatAppearance.BorderSize = 2;
             this.saveBttn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saveBttn5.Location = new System.Drawing.Point(-1, 336);
+            this.saveBttn5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.saveBttn5.Name = "saveBttn5";
-            this.saveBttn5.Size = new System.Drawing.Size(62, 94);
+            this.saveBttn5.Size = new System.Drawing.Size(61, 94);
             this.saveBttn5.TabIndex = 4;
             this.saveBttn5.UseVisualStyleBackColor = false;
             this.saveBttn5.Click += new System.EventHandler(this.saveBttn_Click);
@@ -743,9 +846,10 @@
             this.orgBttn5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.orgBttn5.FlatAppearance.BorderSize = 2;
             this.orgBttn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.orgBttn5.Location = new System.Drawing.Point(-1, 211);
+            this.orgBttn5.Location = new System.Drawing.Point(-1, 210);
+            this.orgBttn5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.orgBttn5.Name = "orgBttn5";
-            this.orgBttn5.Size = new System.Drawing.Size(62, 129);
+            this.orgBttn5.Size = new System.Drawing.Size(61, 129);
             this.orgBttn5.TabIndex = 4;
             this.orgBttn5.UseVisualStyleBackColor = false;
             // 
@@ -757,8 +861,9 @@
             this.docsBttn5.FlatAppearance.BorderSize = 2;
             this.docsBttn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.docsBttn5.Location = new System.Drawing.Point(-1, 140);
+            this.docsBttn5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.docsBttn5.Name = "docsBttn5";
-            this.docsBttn5.Size = new System.Drawing.Size(62, 75);
+            this.docsBttn5.Size = new System.Drawing.Size(61, 75);
             this.docsBttn5.TabIndex = 3;
             this.docsBttn5.UseVisualStyleBackColor = false;
             // 
@@ -770,8 +875,9 @@
             this.wordBttn5.FlatAppearance.BorderSize = 2;
             this.wordBttn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.wordBttn5.Location = new System.Drawing.Point(-1, 70);
+            this.wordBttn5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.wordBttn5.Name = "wordBttn5";
-            this.wordBttn5.Size = new System.Drawing.Size(62, 75);
+            this.wordBttn5.Size = new System.Drawing.Size(61, 75);
             this.wordBttn5.TabIndex = 2;
             this.wordBttn5.UseVisualStyleBackColor = false;
             // 
@@ -783,8 +889,9 @@
             this.homeBttn5.FlatAppearance.BorderSize = 2;
             this.homeBttn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.homeBttn5.Location = new System.Drawing.Point(-1, -1);
+            this.homeBttn5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.homeBttn5.Name = "homeBttn5";
-            this.homeBttn5.Size = new System.Drawing.Size(62, 75);
+            this.homeBttn5.Size = new System.Drawing.Size(61, 75);
             this.homeBttn5.TabIndex = 1;
             this.homeBttn5.UseVisualStyleBackColor = false;
             this.homeBttn5.Click += new System.EventHandler(this.homeBttn_Click);
@@ -793,6 +900,7 @@
             // 
             this.websiteTxtbox5.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::WebScrape2025.Properties.Settings.Default, "websiteTxt5", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.websiteTxtbox5.Location = new System.Drawing.Point(40, 74);
+            this.websiteTxtbox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.websiteTxtbox5.Name = "websiteTxtbox5";
             this.websiteTxtbox5.Size = new System.Drawing.Size(319, 22);
             this.websiteTxtbox5.TabIndex = 8;
@@ -803,7 +911,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Orange;
-            this.label5.Location = new System.Drawing.Point(43, 51);
+            this.label5.Location = new System.Drawing.Point(43, 50);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(90, 16);
             this.label5.TabIndex = 7;
@@ -814,61 +922,11 @@
             this.backBttn5.BackColor = System.Drawing.Color.Orange;
             this.backBttn5.Enabled = false;
             this.backBttn5.Location = new System.Drawing.Point(21, 26);
+            this.backBttn5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.backBttn5.Name = "backBttn5";
             this.backBttn5.Size = new System.Drawing.Size(357, 475);
             this.backBttn5.TabIndex = 5;
             this.backBttn5.UseVisualStyleBackColor = false;
-            // 
-            // scrapeBttn
-            // 
-            this.scrapeBttn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.scrapeBttn.Location = new System.Drawing.Point(295, 41);
-            this.scrapeBttn.Name = "scrapeBttn";
-            this.scrapeBttn.Size = new System.Drawing.Size(64, 26);
-            this.scrapeBttn.TabIndex = 4;
-            this.scrapeBttn.Text = "Scrape";
-            this.scrapeBttn.UseVisualStyleBackColor = true;
-            this.scrapeBttn.Click += new System.EventHandler(this.scrapeBttn_Click);
-            // 
-            // scrapeBttn2
-            // 
-            this.scrapeBttn2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.scrapeBttn2.Location = new System.Drawing.Point(295, 41);
-            this.scrapeBttn2.Name = "scrapeBttn2";
-            this.scrapeBttn2.Size = new System.Drawing.Size(64, 26);
-            this.scrapeBttn2.TabIndex = 5;
-            this.scrapeBttn2.Text = "Scrape";
-            this.scrapeBttn2.UseVisualStyleBackColor = true;
-            // 
-            // scrapeBttn3
-            // 
-            this.scrapeBttn3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.scrapeBttn3.Location = new System.Drawing.Point(295, 41);
-            this.scrapeBttn3.Name = "scrapeBttn3";
-            this.scrapeBttn3.Size = new System.Drawing.Size(64, 26);
-            this.scrapeBttn3.TabIndex = 7;
-            this.scrapeBttn3.Text = "Scrape";
-            this.scrapeBttn3.UseVisualStyleBackColor = true;
-            // 
-            // scrapeBttn4
-            // 
-            this.scrapeBttn4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.scrapeBttn4.Location = new System.Drawing.Point(295, 41);
-            this.scrapeBttn4.Name = "scrapeBttn4";
-            this.scrapeBttn4.Size = new System.Drawing.Size(64, 26);
-            this.scrapeBttn4.TabIndex = 9;
-            this.scrapeBttn4.Text = "Scrape";
-            this.scrapeBttn4.UseVisualStyleBackColor = true;
-            // 
-            // scrapeBttn5
-            // 
-            this.scrapeBttn5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.scrapeBttn5.Location = new System.Drawing.Point(295, 41);
-            this.scrapeBttn5.Name = "scrapeBttn5";
-            this.scrapeBttn5.Size = new System.Drawing.Size(64, 26);
-            this.scrapeBttn5.TabIndex = 10;
-            this.scrapeBttn5.Text = "Scrape";
-            this.scrapeBttn5.UseVisualStyleBackColor = true;
             // 
             // ScraperScreen
             // 
@@ -877,7 +935,7 @@
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(473, 554);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ScraperScreen";
             this.Text = "ScraperScreen";
             this.tabPage2.ResumeLayout(false);

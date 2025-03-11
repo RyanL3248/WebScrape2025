@@ -25,8 +25,15 @@ namespace WebScrape2025
         public string origWebsiteUrl4;
         public string websiteUrl5;
         public string origWebsiteUrl5;
-        private List<String> websites = new List<String>();
+        private List<string> websites = new List<string>();
+        public List<string> extractedData1;
+        public List<string> extractedData2;
+        public List<string> extractedData3;
+        public List<string> extractedData4;
+        public List<string> extractedData5;
+        public List<string> extractedData6;
         private bool scpDone;
+        public string url;
         public ScraperScreen()
         {
             InitializeComponent();
@@ -171,17 +178,17 @@ namespace WebScrape2025
         private async void scrapeBttn_Click(object sender, EventArgs e)
         {
             // URL to scrape
-            string url = this.websiteTxtbox.Text;
+            url = this.websiteTxtbox.Text;
 
             // List of keywords to search for
             var keywords = new List<string> { "outbreak", "dose", "vaccine" };
 
             // Step 1: Create an instance of the WebScraper to get raw HTML content
             var webScraper = new Scraper(url);
-            string htmlContent = await webScraper.ScrapeAsync();  // Scraping HTML content
+            string htmlContent = await webScraper.ScrapeAsync(3);  // Scraping HTML content
 
             // Step 2: Create an instance of ContentExtractor to extract sentences with keywords
-            var contentExtractor = new ContentExtractor(new List<string> { "source" });
+            var contentExtractor = new ContentExtractor(new List<string> { "text" });
 
             // Step 3: Extract the sentences containing the keywords
             List<string> extractedData = new List<string>();
@@ -236,12 +243,34 @@ namespace WebScrape2025
                     extractedData.Add(source);
                 }
 
-                /*if (contentExtractor.contentTypes.Contains("quotes"))
+                if (contentExtractor.contentTypes.Contains("quotes"))
                 {
                     var quotes = contentExtractor.ExtractQuotes(htmlContent);
                     extractedData.AddRange(quotes); 
-                }*/
+                }
             }
+
+            if (this.tabControl1.SelectedIndex == 0)
+            {
+                extractedData1 = extractedData;
+            }
+            else if (this.tabControl1.SelectedIndex == 1)
+            {
+                extractedData2 = extractedData;
+            }
+            else if (this.tabControl1.SelectedIndex == 2)
+            {
+                extractedData3 = extractedData;
+            }
+            else if (this.tabControl1.SelectedIndex == 3)
+            {
+                extractedData4 = extractedData;
+            }
+            else if (this.tabControl1.SelectedIndex == 4)
+            {
+                extractedData5 = extractedData;
+            }
+
 
             // Step 4: Display the extracted data in the console (or wherever needed)
             DisplayExtractedData(extractedData);

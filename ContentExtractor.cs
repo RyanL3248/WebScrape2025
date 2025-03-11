@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
 
 namespace WebScrape2025
@@ -20,7 +21,7 @@ namespace WebScrape2025
             this.contentTypes = contentTypes;
         }
 
-        // Extract text content from <p> tags
+        // Extract text content from <p> tags (#10 - Extract Paragraph Text)
         public List<string> ExtractText(string html)
         {
             var document = ParseHtml(html);
@@ -63,7 +64,7 @@ namespace WebScrape2025
             return null;
         }
 
-        // Extract date content
+        // Extract date content (#2 REGEX - VALIDATION)
         public List<string> ExtractDate(string html)
         {
             if (string.IsNullOrEmpty(html))
@@ -190,26 +191,42 @@ namespace WebScrape2025
             return imageUrls;
         }
 
-        // Extract quotes from the text content of the webpage using regex (from <p> tags)
+        // Method to extract quotes only from <p> tags in the HTML content
         public List<string> ExtractQuotes(string html)
         {
-            if (string.IsNullOrEmpty(html))
-            {
-                return new List<string>();
-            }
+            var document = ParseHtml(html);
+
+            // Select all <p> tags in the document
+            var paragraphs = document.QuerySelectorAll("p");
+
+            // Refined regex pattern to find quotes inside double quotes
+            var quotePattern = "[\"“”]([^\"“”]+)[\"”]";
 
             List<string> quotes = new List<string>();
 
-            // This regex pattern matches text within double quotes
-            // It handles escaped quotes (\") within the quoted text
-            Regex regex = new Regex("\"([^\"\\\\]*(\\\\.[^\"\\\\]*)*)\"");
-
-            MatchCollection matches = regex.Matches(html);
-
-            foreach (Match match in matches)
+            // Loop through each <p> tag and apply regex to extract quotes
+            foreach (var paragraph in paragraphs)
             {
-                // match.Groups[1].Value contains just the text inside the quotes
-                quotes.Add(match.Groups[1].Value);
+                // Get the text content of the paragraph
+                string textContent = paragraph.TextContent;
+
+                // Debugging: Print out the paragraph text content
+                Console.WriteLine($"Paragraph content: {textContent}");
+
+                // Use regex to find all quotes in this paragraph
+                var matches = Regex.Matches(textContent, quotePattern);
+
+                Console.WriteLine($"Found {matches.Count} quotes in the paragraph.");
+
+                // Extract the quotes and add them to the list
+                foreach (Match match in matches)
+                {
+                    string quote = match.Groups[1].Value.Trim(); // Extract content inside quotes and trim spaces
+                    if (!string.IsNullOrWhiteSpace(quote)) // Only add non-empty quotes
+                    {
+                        quotes.Add(quote);
+                    }
+                }
             }
 
             return quotes;
@@ -295,12 +312,20 @@ namespace WebScrape2025
             return sentences;
         }
 
-        // Parse HTML content using AngleSharp
-        private IHtmlDocument ParseHtml(string html)
+        // Parse HTML content using AngleSharp (#9 - Parsing HTML w/ Error Handling)
+        private IHtmlDocument ParseHtml(string html) 
         {
-            var config = Configuration.Default.WithDefaultLoader();
-            var document = BrowsingContext.New(config).OpenAsync(req => req.Content(html)).Result;
-            return (IHtmlDocument)document;
+            try
+            {
+                var config = Configuration.Default.WithDefaultLoader();
+                var document = BrowsingContext.New(config).OpenAsync(req => req.Content(html)).Result;
+                return (IHtmlDocument)document;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error parsing HTML: {ex.Message}");
+                return null;
+            }
         }
     }
 
