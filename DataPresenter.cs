@@ -37,14 +37,14 @@ namespace WebScrape2025
             }
         }
 
-        // Method to sort the list using QuickSort algorithm (#7 QuickSort)
+        // Method to sort the list using QuickSort algorithm 
         public void QuickSort(List<string> data)
         {
             // Call the QuickSort method recursively
             QuickSortHelper(data, 0, data.Count - 1);
         }
 
-        // Helper method for QuickSort (#8 Recursion)
+        // Helper method for QuickSort 
         private void QuickSortHelper(List<string> data, int low, int high)
         {
             if (low < high)

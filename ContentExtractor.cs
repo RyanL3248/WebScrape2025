@@ -3,6 +3,7 @@ using AngleSharp.Dom;
 using AngleSharp.Html.Dom;
 using AngleSharp.Html.Parser;
 using System;
+using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace WebScrape2025
             this.contentTypes = contentTypes;
         }
 
-        // Extract text content from <p> tags (#10 - Extract Paragraph Text)
+        // Extract text content from <p> tags 
         public List<string> ExtractText(string html)
         {
             var document = ParseHtml(html);
@@ -78,7 +79,7 @@ namespace WebScrape2025
             var datePatterns = new[]
             {
             // ISO 8601 (yyyy-MM-dd)
-            @"\b(\d{4}[-/]\d{1,2}[-/]\d{1,2})\b",
+            @"\b(\d{4}[-/]\d{1,2}[-/]\d{1,2})\b", 
             
             // MM/dd/yyyy or dd/MM/yyyy
             @"\b(\d{1,2}[-/\.]\d{1,2}[-/\.]\d{4})\b",
@@ -148,24 +149,38 @@ namespace WebScrape2025
         public List<string> ExtractLinks(string html)
         {
             var document = ParseHtml(html);
-            var links = document.QuerySelectorAll("a");
+            var links = document.QuerySelectorAll("p a");  // Select <a> tags inside <p> tags
             var linkUrls = new List<string>();
 
             foreach (var link in links)
             {
-                linkUrls.Add(link.GetAttribute("href"));
+                var href = link.GetAttribute("href");
+                if (!string.IsNullOrEmpty(href))  // Optionally filter out empty or null href attributes
+                {
+                    linkUrls.Add(href);
+                }
             }
 
             return linkUrls;
         }
+
 
         // Extract image URLs from <img> tags
         public List<string> ExtractImages(string html, string baseUrl)
         {
             var document = ParseHtml(html);
 
-            // Select all <img> tags in the document
-            var images = document.QuerySelectorAll("img");
+            // Select the main article or content section (adjust selector based on the website structure)
+            var articleSection = document.QuerySelector("article, main, .article, .content");
+
+            // If no article section is found, return an empty list
+            if (articleSection == null)
+            {
+                return new List<string>();
+            }
+
+            // Select all <img> tags within the article section
+            var images = articleSection.QuerySelectorAll("img");
 
             // List to hold the image URLs
             var imageUrls = new List<string>();
@@ -177,6 +192,13 @@ namespace WebScrape2025
 
                 if (!string.IsNullOrEmpty(src))
                 {
+                    // Filter out advertisement images (e.g., by class or src patterns)
+                    // You can refine this based on your knowledge of ad-related image patterns
+                    if (src.Contains("ads") || src.Contains("banner") || src.Contains("advertisement"))
+                    {
+                        continue;  // Skip images that match ad-related patterns
+                    }
+
                     // If the src is a relative URL, prepend the base URL
                     if (!Uri.IsWellFormedUriString(src, UriKind.Absolute))
                     {
@@ -190,6 +212,8 @@ namespace WebScrape2025
 
             return imageUrls;
         }
+
+
 
         // Method to extract quotes only from <p> tags in the HTML content
         public List<string> ExtractQuotes(string html)
@@ -312,7 +336,7 @@ namespace WebScrape2025
             return sentences;
         }
 
-        // Parse HTML content using AngleSharp (#9 - Parsing HTML w/ Error Handling)
+        // Parse HTML content using AngleSharp 
         private IHtmlDocument ParseHtml(string html) 
         {
             try
@@ -323,7 +347,7 @@ namespace WebScrape2025
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error parsing HTML: {ex.Message}");
+                MessageBox.Show($"Error parsing HTML: {ex.Message}");
                 return null;
             }
         }

@@ -222,6 +222,7 @@
             this.orgBttn2.Size = new System.Drawing.Size(61, 129);
             this.orgBttn2.TabIndex = 4;
             this.orgBttn2.UseVisualStyleBackColor = false;
+            this.orgBttn2.Click += new System.EventHandler(this.orgBttn2_Click);
             // 
             // docsBttn2
             // 
@@ -250,6 +251,7 @@
             this.wordBttn2.Size = new System.Drawing.Size(61, 75);
             this.wordBttn2.TabIndex = 2;
             this.wordBttn2.UseVisualStyleBackColor = false;
+            this.wordBttn2.Click += new System.EventHandler(this.wordBttn5_Click);
             // 
             // homeBttn2
             // 
@@ -356,6 +358,7 @@
             this.downloadBttn.Size = new System.Drawing.Size(61, 92);
             this.downloadBttn.TabIndex = 5;
             this.downloadBttn.UseVisualStyleBackColor = false;
+            this.downloadBttn.Click += new System.EventHandler(this.downloadBttn_Click);
             // 
             // saveBttn
             // 
@@ -385,6 +388,7 @@
             this.orgBttn.Size = new System.Drawing.Size(61, 129);
             this.orgBttn.TabIndex = 4;
             this.orgBttn.UseVisualStyleBackColor = false;
+            this.orgBttn.Click += new System.EventHandler(this.orgBttn_Click);
             // 
             // docsBttn
             // 
@@ -413,6 +417,7 @@
             this.wordBttn.Size = new System.Drawing.Size(61, 75);
             this.wordBttn.TabIndex = 2;
             this.wordBttn.UseVisualStyleBackColor = false;
+            this.wordBttn.Click += new System.EventHandler(this.wordBttn5_Click);
             // 
             // homeBttn
             // 
@@ -443,7 +448,6 @@
             this.tabControl1.Size = new System.Drawing.Size(475, 550);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
-            this.tabControl1.Click += new System.EventHandler(this.scrapeBttn_Click);
             // 
             // tabPage3
             // 
@@ -472,6 +476,7 @@
             this.scrapeBttn3.TabIndex = 7;
             this.scrapeBttn3.Text = "Scrape";
             this.scrapeBttn3.UseVisualStyleBackColor = true;
+            this.scrapeBttn3.Click += new System.EventHandler(this.scrapeBttn_Click);
             // 
             // websiteTxtbox3
             // 
@@ -551,6 +556,7 @@
             this.orgBttn3.Size = new System.Drawing.Size(61, 129);
             this.orgBttn3.TabIndex = 4;
             this.orgBttn3.UseVisualStyleBackColor = false;
+            this.orgBttn3.Click += new System.EventHandler(this.orgBttn_Click);
             // 
             // docsBttn3
             // 
@@ -579,6 +585,7 @@
             this.wordBttn3.Size = new System.Drawing.Size(61, 75);
             this.wordBttn3.TabIndex = 2;
             this.wordBttn3.UseVisualStyleBackColor = false;
+            this.wordBttn3.Click += new System.EventHandler(this.wordBttn5_Click);
             // 
             // homeBttn3
             // 
@@ -633,6 +640,7 @@
             this.scrapeBttn4.TabIndex = 9;
             this.scrapeBttn4.Text = "Scrape";
             this.scrapeBttn4.UseVisualStyleBackColor = true;
+            this.scrapeBttn4.Click += new System.EventHandler(this.scrapeBttn_Click);
             // 
             // panel4
             // 
@@ -719,6 +727,7 @@
             this.wordBttn4.Size = new System.Drawing.Size(61, 75);
             this.wordBttn4.TabIndex = 2;
             this.wordBttn4.UseVisualStyleBackColor = false;
+            this.wordBttn4.Click += new System.EventHandler(this.wordBttn5_Click);
             // 
             // homeBttn4
             // 
@@ -794,6 +803,7 @@
             this.scrapeBttn5.TabIndex = 10;
             this.scrapeBttn5.Text = "Scrape";
             this.scrapeBttn5.UseVisualStyleBackColor = true;
+            this.scrapeBttn5.Click += new System.EventHandler(this.scrapeBttn_Click);
             // 
             // panel5
             // 
@@ -852,6 +862,7 @@
             this.orgBttn5.Size = new System.Drawing.Size(61, 129);
             this.orgBttn5.TabIndex = 4;
             this.orgBttn5.UseVisualStyleBackColor = false;
+            this.orgBttn5.Click += new System.EventHandler(this.orgBttn_Click);
             // 
             // docsBttn5
             // 
@@ -880,6 +891,7 @@
             this.wordBttn5.Size = new System.Drawing.Size(61, 75);
             this.wordBttn5.TabIndex = 2;
             this.wordBttn5.UseVisualStyleBackColor = false;
+            this.wordBttn5.Click += new System.EventHandler(this.wordBttn5_Click);
             // 
             // homeBttn5
             // 
@@ -935,7 +947,7 @@
             this.BackColor = System.Drawing.Color.LightSkyBlue;
             this.ClientSize = new System.Drawing.Size(473, 554);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ScraperScreen";
             this.Text = "ScraperScreen";
             this.tabPage2.ResumeLayout(false);

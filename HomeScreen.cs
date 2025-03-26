@@ -13,13 +13,17 @@ namespace WebScrape2025
 {
     public partial class HomeScreen : Form
     {
-        //private Customization customizationForm;
+
+        public ScraperSettings settings;
+
         public HomeScreen()
         {
             InitializeComponent();
 
             this.Load += HomeScreen_Load;
             this.MinimumSize = new Size(369, 489);
+
+            settings = new ScraperSettings(false, false, false, false, false, false, false, false, false, false, new List<string>());
         }
 
         private void HomeScreen_Load(object sender, EventArgs e)
@@ -34,7 +38,7 @@ namespace WebScrape2025
         private void scraperBttn_Click(object sender, EventArgs e)
         {
 
-            ScraperScreen scraperScreen = new ScraperScreen(this);
+            ScraperScreen scraperScreen = new ScraperScreen(this, settings);
 
             //scraperScreen.Location = this.Location;
 
@@ -46,7 +50,7 @@ namespace WebScrape2025
 
         private void customizationBttn_Click(object sender, EventArgs e)
         {
-            Customization customizationForm = new Customization(this);
+            Customization customizationForm = new Customization(this, settings);
    
             customizationForm.Location = this.Location;
 

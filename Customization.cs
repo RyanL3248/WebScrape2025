@@ -39,6 +39,7 @@ namespace WebScrape2025
         public string[] keywords;
         public string[] origKeywords;
         private string pattern = @",\s*";
+        private ScraperSettings settings;
 
         public Customization()
         {
@@ -46,13 +47,14 @@ namespace WebScrape2025
             this.MinimumSize = new Size(369, 489);
         }
 
-        public Customization(HomeScreen homeScreen)
+        public Customization(HomeScreen homeScreen, ScraperSettings settings)
         {
             InitializeComponent();
             homeScreenForm = homeScreen;
 
-           this.Load += Customization_Load;
-           this.MinimumSize = new Size(369, 489);
+            this.Load += Customization_Load;
+            this.MinimumSize = new Size(369, 489);
+            this.settings = settings;
         }
 
         private void Customization_Load(object sender, EventArgs e)
@@ -144,7 +146,7 @@ namespace WebScrape2025
 
         private void keywordTxtbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ' && e.KeyChar != ',') 
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != ' ' && e.KeyChar != ',' && e.KeyChar != '-') 
             {
                 e.Handled = true;
             }
@@ -215,17 +217,39 @@ namespace WebScrape2025
             Properties.Settings.Default.Save();
 
             origTxtCboxState = this.txtCbox.Checked;
+            this.settings.ScpText = this.txtCbox.Checked;
             origImgCboxState = this.imageCbox.Checked;
+            this.settings.ScpImages = this.imageCbox.Checked;
             origLinkCboxState = this.linksCbox.Checked;
+            this.settings.ScpLinks = this.linksCbox.Checked;
             origQuoteCboxState = this.quotesCbox.Checked;
+            this.settings.ScpQuotes = this.quotesCbox.Checked;
             origStatCboxState = this.statsCbox.Checked;
+            this.settings.ScpStats = this.statsCbox.Checked;
             origTitleCboxState = this.titleCbox.Checked;
+            this.settings.PutTitle = this.titleCbox.Checked;
             origDateCboxState = this.dateCbox.Checked;
+            this.settings.PutDate = this.dateCbox.Checked;
             origSourceCboxState = this.sourceCbox.Checked;
+            this.settings.PutSource = this.sourceCbox.Checked;
             origParCboxState = this.paragraphCbox.Checked;
+            this.settings.ParOrg = this.paragraphCbox.Checked;
             origListCboxState = this.listCbox.Checked;
+            this.settings.ListOrg = this.listCbox.Checked;
 
             origKeywords = keywords;
+            try
+            {
+                if (this.keywordTxtbox != null)
+                {
+                    this.settings.Keywords = keywords.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                   //Do nothing
+            }
+            //this.settings.Keywords = keywords.ToList();
         }
     }
 }

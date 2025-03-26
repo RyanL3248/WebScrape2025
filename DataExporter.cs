@@ -8,6 +8,15 @@ using Newtonsoft.Json;
 using System.Windows;
 using System.Runtime.InteropServices;
 using Microsoft.Office.Interop.Word;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
+using iText.Layout.Properties;
+using Document = Microsoft.Office.Interop.Word.Document;
+using Paragraph = Microsoft.Office.Interop.Word.Paragraph;
+using Document2 = iText.Layout.Document;
+using Paragraph2 = iText.Layout.Element.Paragraph;
+using TextAlignment = iText.Layout.Properties.TextAlignment;
 
 namespace WebScrape2025
 {
@@ -77,6 +86,32 @@ namespace WebScrape2025
             {
                 // General error handling
                 MessageBox.Show($"Error exporting data to Word: {ex.Message}");
+            }
+        }
+
+        //Method to export data to PDF file
+        public void ExportToPdf(List<string> data, string filePath)
+        {
+            // Create a PdfWriter instance to write to the specified file path
+            using (PdfWriter writer = new PdfWriter(filePath))
+            {
+                // Create a PdfDocument object using the PdfWriter
+                using (PdfDocument pdf = new PdfDocument(writer))
+                {
+                    // Create a Document object to add content to the PDF
+                    Document2 document = new Document2(pdf);
+
+                    // Add a title to the document (optional)
+                    document.Add(new Paragraph2("Exported List of Strings")
+                        .SetTextAlignment(TextAlignment.CENTER)
+                        .SetFontSize(14));
+
+                    // Add each string from the List<string> as a separate paragraph
+                    foreach (string item in data)
+                    {
+                        document.Add(new Paragraph2(item));
+                    }
+                }
             }
         }
 
